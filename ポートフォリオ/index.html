@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/favicon.png">
+</head>
+<body>
+
+     <header>
+      <nav>
+        <ul>       
+          <li>
+            <a href="#">
+              <i class="bi bi-search"></i>
+              <p>見つける</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-box-arrow-in-left"></i>
+              <p>ログイン</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bi bi-cart"></i>
+              <p>カート</p>
+            </a>
+          </li>
+          <li>
+            <div id="open">
+              <i class="bi bi-list"></i>
+              <p>メニュー</p>
+            </div>
+          </li>
+        </ul>
+      </nav>
+
+        <!-- 検索フォーム -->
+        <!-- <form action="">
+          <input type="text" placeholder="キーワードで探す (例)ユリ" name="" id=""><button type="submit" id=""><i class="bi bi-search"></i></button>
+        </form>  -->
+
+      </header>
+
+      <!-- ハンバーガーメニュー -->
+      <div class="overlay">
+        <!-- 閉じるボタン -->
+        <div id="close">
+          <span class="material-icons">close</span>
+          <p>閉じる</p>
+        </div>
+        <!-- メニュー -->
+        <h2>Flower Market shiga</h2>
+        <ul>
+          <li><a href="#">花束・ブーケ</a></li>
+          <li><a href="#">アレンジメント</a></li>
+          <li><a href="#">ブリザードフラワー</a></li>
+          <li><a href="#">季節限定</a></li>
+          <li><a href="#">お問い合わせ</a></li>
+        </ul>
+      </div>
+
+      
+    <section class="logo">
+      <img src="img/logo.png" alt="ロゴ">
+    </section>
+
+    <section class="menu">
+      <ul>
+        <li>
+          <a href="#">花束・ブーケ</a>
+        </li>
+        <li>
+          <a href="#">アレンジメント</a>
+        </li>
+        <li>
+          <a href="#">ブリザードフラワー</a>
+        </li>
+        <li>
+          <a href="#">季節限定</a>
+        </li>
+      </ul>   
+    </section>
+
+    <section class="carousel" >
+        <ul id="carousel-ul">
+          <li>
+            <div>
+              <a href="#">
+                <img src="img/Bouquet1.png" alt="ブーケ1">
+                <p>Bouquet ¥2,400</p>
+              </a>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">
+                <img src="img/arangement1.png" alt="ブーケ1">
+                <p>Bouquet1 ¥2,400</p>
+              </a>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">
+                <img src="img/Bouquet2.png" alt="ブーケ1">
+                <p>Bouquet1 ¥2,400</p>
+              </a>
+            </div>
+          </li>
+        </ul>
+
+        <!-- 戻る・進むボタン -->
+        <button id="prev">&laquo;</button>
+        <button id="next">&raquo;</button>
+
+        <!-- 画像下の丸い点 -->
+        <nav id="carousel-nav">
+        </nav>
+        
+    </section>
+
+    <section class="ranking animate">
+      <h2>RANKING</h2>
+      <div class="container">
+        <ul>
+          <li class="animate">
+            <a href="#">
+              <div>
+                <img src="img/arangement1.png" alt="Bouquet1">
+                <h3>1</h3>
+                <p>Bouquet</p>
+                <p>2,500円</p>
+              </div>
+            </a>
+          </li>
+          <li class="animate delay">
+            <a href="#">
+              <div>
+                <img src="img/Bouquet1.png" alt="Bouquet1">
+                <h3>2</h3>
+                <p>Bouquet</p>
+                <p>2,500円</p>
+              </div>
+            </a>
+          </li>
+          <li class="animate delay-more">
+            <a href="#">
+              <div>
+                <img src="img/Bouquet2.png" alt="Bouquet1">
+                <h3>3</h3>
+                <p>Bouquet</p>
+                <p>2,500円</p>
+              </div>
+            </a>
+          </li>
+          <li class="animate">
+            <a href="#">
+              <div>
+                <img src="img/arangement2.png" alt="Bouquet1">
+                <h3>4</h3>
+                <p>Bouquet</p>
+                <p>2,500円</p>
+              </div>
+            </a>
+          </li>
+          <li class="animate delay">
+            <a href="#">
+              <div>
+                <img src="img/Bouquet3.png" alt="Bouquet1">
+                <h3>5</h3>
+                <p>Bouquet</p>
+                <p>2,500円</p>
+              </div>
+            </a>
+          </li>
+          <li class="animate delay-more">
+            <a href="#">
+              <div>
+                <img src="img/Bouquet4.png" alt="Bouquet1">
+                <h3>6</h3>
+                <p>Bouquet</p>
+                <p>2,500円</p>
+              </div>
+            </a>
+          </li>
+        </ul> 
+      </div>
+    </section>
+
+    <section class="new-items animate">
+      <h2>NEW ITEMS</h2>
+      <div class="container">
+        <ul>
+          <li>
+            <div>
+              <a href="#">
+                <img src="img/new-item1.png" alt="Bouquet1">
+                <p>Bouquet ¥2,400</p>
+              </a>
+            </div>
+          </li>
+          <li>
+            <div>
+              <a href="#">
+                  <img src="img/new-item2.png" alt="Bouquet1">
+                  <p>Bouquet ¥2,400</p>
+              </a>
+            </div>
+          </li>
+          <li>
+            <a href="#">
+                <img src="img/new-item3.png" alt="Bouquet1">
+            </a>
+          </li>
+          <li>
+            <a href="#">
+                <img src="img/new-item4.png" alt="Bouquet1">
+            </a>
+          </li>
+          <li>
+            <a href="#">
+                <img src="img/new-item5.png" alt="Bouquet1">
+            </a>
+          </li>
+          <li>
+            <a href="#">
+                <img src="img/new-item6.png" alt="Bouquet1">
+            </a>
+          </li>
+        </ul> 
+      </div>
+    </section>
+
+    <section class="news animate">
+      <div class="container">
+        <h2>NEWS</h2>
+        <ul>
+          <li>
+            <a href="#">
+              <p>2023.3.3</p>
+              <p>【春季限定】キャンペーンのお知らせ</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <p>2023.1.23</p>
+              <p>全国的寒波による配送遅延のお知らせ</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <p>2022.12.10</p>
+              <p>年末年始における営業時間のお知らせ</p>
+            </a>
+          </li>
+        </ul>
+
+        <a href="#" class="more">
+          <p>NEWSをもっと見る</p>
+          <p><span class="arrow"></span></p>
+        </a>
+
+      </div>
+    </section>
+    
+    <footer>
+      <div class="up">
+          <a href="#"><span>↑</span> うえへ</a>
+      </div>
+  
+      <section class="adress">
+          <ul>
+              <li>
+                  <h3>Flower Market shiga</h3>
+                  <p>〒520-3528 滋賀県野洲市小篠原8888</p>
+              </li>
+          </ul>
+      </section>
+  
+      <section class="links">
+          <div class="container">
+              <ul>
+                <li>
+                    <a href="#">お買い物ガイド</a>
+                </li>
+                <li>
+                  <a href="#">配達について</a>
+                </li>
+                <li>
+                  <a href="#">お支払い方法について</a>
+                </li>
+                <li>
+                   <a href="#">特定商取引に基づく表示</a>
+                </li>
+                <li>
+                    <a href="#">プライバシーポリシー</a>
+                </li>
+                <li>
+                    <a href="#">お問い合せ</a>
+                </li>
+              </ul>
+          </div>
+      </section>
+  
+      <section class="sns">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+      </section>
+  
+      <section class="copyright">
+          <small>Copyright ©️ Flower Market shiga. All Rights Reserved.</small>
+      </section>
+  
+    </footer>
+
+    <script src="js/main.js"></script>
+ 
+    
+</body>
+</html>
