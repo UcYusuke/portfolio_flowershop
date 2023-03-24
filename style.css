@@ -59,6 +59,27 @@ a{
     margin: 0 40px;
 }
 
+/* ボタン */
+.btn{
+  display: flex;
+  height:40px;
+  background: darkgreen;
+  color: white;
+  line-height: 40px;  
+  transition: opacity .3s;
+}
+.btn p{
+  flex: 1;
+  margin-left: 16px;
+  text-align: center;
+}
+.btn i{
+  margin: 0 8px 0 auto;
+}
+.btn:hover{
+  opacity: .7;
+}
+
 
 
 /* ハンバーガーメニュー */
@@ -511,6 +532,7 @@ transform: translate(-30%,-30%);
   display: flex;
   justify-content: center;
   height: 240px;
+  color: #333;
 }
 
 .contact ul{
@@ -524,22 +546,48 @@ transform: translate(-30%,-30%);
   width: calc((100%) / 3);
   text-align: center;
   border-left: 1px solid #ccc;
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .contact ul li:last-child{
   border-right: 1px solid #ccc;
 }
 
-.contact .btn{
+/* アイコン部分 */
+.contact ul li a:first-child{
   display: block;
-  width: 160px;
-  height:32px;
-  border: 1px solid black;
-  border-radius: 16px;
-  text-align: center;  
-  line-height: 32px;  
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+  font-size: 32px;
+  color: darkolivegreen;
+  background: #f2f7f1;
+  margin-bottom: 16px;
 }
+
+.contact .btn{
+  width: 80%;
+  margin-top: 16px;
+}
+
+.contact .PhoneNumber{
+  color: darkolivegreen;
+  font-size: 24px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  padding: 8px 0;
+}
+
+.contact .BusinessHour{
+  font-size: 14px;
+}
+
+
+
+/* sns */
 
 .contact .sns h3{
   font-family: var(--Mincho-font);
@@ -561,7 +609,7 @@ transform: translate(-30%,-30%);
 /* information */
 
 .news{
-    padding: 128px 0 32px;
+    padding: 128px 0;
 }
 
 .news li{
@@ -582,64 +630,11 @@ transform: translate(-30%,-30%);
     opacity: .7;
   }
 
-.news .more{
-    display: flex;
-    width: 60%;
-    letter-spacing: 2px;
-    border: 1px solid #ccc;
-    margin: 32px auto 64px;
+  .news .btn{
+    width: 50%;
+    margin: 32px auto 0;
   }
 
-
-
-  .news .more p{
-    line-height: 40px;
-    transition: color .3s;
-  }
-
-  .news .more p:nth-child(1){
-    margin-left: auto;
-    padding-left: 32px;
-    color: #333;
-  }
-
-  /* 矢印 */
-  .news .more p+p{
-    margin-left: auto;
-    padding-right: 16px;
-  }
-  
-  .arrow{
-    display: inline-block;
-    vertical-align: middle;
-    width: 36px;
-    height: 1px;
-    background: #333;
-    position: relative;
-  }
-  
-  .arrow::before,
-  .arrow::after{
-    content: "";
-    display: block;
-    width: 12px;
-    height: 1px;
-    background: #333;
-    position: absolute;
-  }
-  
-  .arrow::before{
-    right: 0;
-    transform: rotate(45deg);
-    transform-origin: right;
-  }
-  
-  .arrow::after{
-    right: 8px;
-    top: -8px;
-    transform: rotate(-90deg);
-    transform-origin: right;
-  }
 
 
 
