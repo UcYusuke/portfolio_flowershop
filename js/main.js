@@ -46,40 +46,45 @@
 
 
 
-    //hero
+    //スクロールされたときheaderにスタイルをつける
 
-    function play(){
-        //１秒後画像を切り替え
-        setTimeout(()=>{
-            //現在ついているcurrentクラスをまず外す
-            images[currentIndex2].classList.remove('current');
-            
-            //インデックス番号を１増やして次の画像を表示
-            currentIndex2++;
+    const header = document.querySelector('header') //ヘッダーの要素を取得
 
-            //インデックス番号が画像の数を超えたら0(最初の画像)に戻す
-            //インデックスは0番目から始まるので、-1する。
-            //画像が３枚の場合,インデックス番号が２(3枚目の画像）を超えたら0に戻す
-            if(currentIndex2 > images.length - 1){
-                currentIndex2 = 0;
+    //スクロールしたときに呼び出す関数
+    function OnscrollCallback(entries){
+        entries.forEach(entry=>{
+            //空要素が交差していないとき＝空要素が画面から消えていて少しでもスクロールしたとき
+            if(!entry.isIntersecting){
+                //ヘッダーにscrolledクラスをつける
+                header.classList.add('scrolled')
+            }else{ //画面の１番上に戻ったとき＝空要素が画面にあるとき（交差がtrue）
+                header.classList.remove('scrolled')
             }
-
-            //現在のインデックス番号の画像に、currentクラスをつけて画像を表示
-            images[currentIndex2].classList.add('current');
-
-            //setTimeoutを再帰的に繰り返し
-            play();
-    
-        },3000);
+        });
     }
 
-    //ヒーローエリアのimgを全て取得
-    const images = document.querySelectorAll('.hero img');
+    //スクロールされたかどうかを監視するオブザーバー
+    const OnscrollObserver = new IntersectionObserver(OnscrollCallback);
 
-    //現在表示している画像が何番目であるかのインデックスを変数で保持
-    let currentIndex2 = 0; //初期は0番目の画像を表示
+    //targetをつけた空要素の監視を開始
+    OnscrollObserver.observe(document.getElementById('target'))
 
-    play();
+    
+
+    //上へをクリックしたとき、スルスルっと戻る
+
+    const toTop = document.getElementById('to-top') //ID to-topの要素を取得
+
+    //上へ戻るボタンがクリックされたとき
+    toTop.addEventListener('click',e => {
+        //アドレスに#タグがつく規定動作をキャンセル
+        e.preventDefault();
+        //画面の１番上へスルスルっと戻す
+        window.scrollTo({
+            top:0, //1番上に戻る
+            behavior:'smooth', //スルスルっと戻る
+        });
+    });
 
 
 

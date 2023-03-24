@@ -14,41 +14,47 @@
 <body>
 
      <header>
-      <nav>
-        <ul>       
-          <li>
-            <a href="#">
-              <i class="bi bi-search"></i>
-              <p>見つける</p>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="bi bi-box-arrow-in-left"></i>
-              <p>ログイン</p>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <i class="bi bi-cart"></i>
-              <p>カート</p>
-            </a>
-          </li>
-          <li>
-            <div id="open">
-              <i class="bi bi-list"></i>
-              <p>メニュー</p>
-            </div>
-          </li>
-        </ul>
-      </nav>
+      <div class="head-container">
+        <img src="img/header.png" alt="">
+        <nav>
+          <ul>       
+            <li>
+              <a href="#">
+                <i class="bi bi-search"></i>
+                <p>見つける</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="bi bi-box-arrow-in-left"></i>
+                <p>ログイン</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="bi bi-cart"></i>
+                <p>カート</p>
+              </a>
+            </li>
+            <li>
+              <div id="open">
+                <i class="bi bi-list"></i>
+                <p>メニュー</p>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-        <!-- 検索フォーム -->
-        <!-- <form action="">
-          <input type="text" placeholder="キーワードで探す (例)ユリ" name="" id=""><button type="submit" id=""><i class="bi bi-search"></i></button>
-        </form>  -->
+    <!-- スクロールを監視するための空要素 -->
+    <div id="target"></div>
+    
+    <!-- 検索フォーム -->
+    <!-- <form action="">
+      <input type="text" placeholder="キーワードで探す (例)ユリ" name="" id=""><button type="submit" id=""><i class="bi bi-search"></i></button>
+    </form>  -->
 
-      </header>
 
       <!-- ハンバーガーメニュー -->
       <div class="overlay">
@@ -68,37 +74,47 @@
         </ul>
       </div>
 
-      
-    <section class="logo">
-      <img src="img/logo.png" alt="ロゴ">
-    </section>
 
-    <section class="menu">
+    <!-- top-menu -->
+
+    <section class="top-menu">
       <ul>
-        <li>
-          <a href="#">花束・ブーケ</a>
-        </li>
         <li>
           <a href="#">アレンジメント</a>
         </li>
         <li>
-          <a href="#">ブリザードフラワー</a>
+          <a href="#">花束</a>
         </li>
         <li>
-          <a href="#">季節限定</a>
+          <a href="#">スタンド花</a>
+        </li>
+        <li>
+          <a href="#">観葉植物</a>
         </li>
       </ul>   
     </section>
 
-    <section class="hero">
-      <p>大切なあなたへ「想い」を届ける</p>
-      <img src="img/hero2.png" alt="メインビジュアル画像">
-     
-      <img src="img/hero1.png" alt="メインビジュアル画像">
-    </section>
+
+
+    <!-- category -->
 
     <section class="ranking animate">
-      <h2>RANKING</h2>
+      <div class="tytle">
+        <h2>CATEGORY</h2>
+        <p>用途で探す</p>
+      </div>
+    </section>
+
+
+
+    <!-- ranking -->
+
+    <section class="ranking animate">
+      <div class="tytle">
+        <h2>RANKING</h2>
+        <p>人気ランキング</p>
+      </div>
+
       <div class="container">
         <ul>
           <li class="animate">
@@ -165,8 +181,16 @@
       </div>
     </section>
 
+
+
+    <!-- new items -->
+
     <section class="new-items animate">
-      <h2>NEW ITEMS</h2>
+      <div class="tytle">
+        <h2>NEW ITEMS</h2>
+        <p>新着商品</p>
+      </div>
+
       <div class="container">
         <ul>
           <li>
@@ -209,9 +233,95 @@
       </div>
     </section>
 
-    <section class="news animate">
+
+
+    <!-- about us -->
+
+    <section class="aboutus animate">
+      <div class="tytle">
+        <h2>ABOUT US</h2>
+        <p>フラワーショップ滋賀について</p>
+      </div>
+
       <div class="container">
-        <h2>NEWS</h2>
+        <ul>
+          <li>
+            <img src="img/aboutus.png" alt="お店の画像">
+          </li>
+          <li>
+            <div>
+              <h3>Flower shop shiga</h3>
+              <section>
+                <p>〒520-3588 滋賀県 野洲市小篠原8888</p>
+                <p>営業時間 9:00-18:00 (火曜日 定休日) / TEL 0775-177-1***</p>
+              </section>
+              <section>
+                <p>フラワーショップ滋賀では、お客様の要望に合わせて新鮮で高品質なお花をまごころを込めて全国へお届けします。<br>
+                インターネット通販だけでなく、店頭でも季節の花々を取り揃えていますので、お気軽にご来店ください。</p>
+                <p>私たちが考える「品質」の「品」は、<br>「あなたへの思いやりの度合い」</p>
+                <p>大切な人へ想いを寄せた贈り物や日常に生活に癒しを求める、
+                  そんなあなたの想いを、美しい花とともにサポートできたらこれ以上ない幸せです。</p>
+              </section>
+            </div>
+          </li>
+        </div>
+    </section>
+
+
+
+    <!-- contact -->
+
+    <section class="contact animate">
+      <div class="tytle">
+        <h2>CONTACT</h2>
+        <p>ご注文方法などお気軽にお問い合わせください</p>
+      </div>
+
+      <div class="container">
+        <ul>
+          <li>
+            <a href="#"><i class="bi bi-envelope"></i></a>
+            <p>メールでのお問い合わせ</p>
+            <a href="#" class="btn">
+              お問合せする
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </li>
+          <li>
+            <a href=""><i class="bi bi-telephone"></i></a>
+            <p>お電話でのご注文・お問い合わせ</p>
+            <p>0775-177-1***</p>
+            <p>対応時間 9:00-18:00 (火曜日 定休日)</p>
+          </li>
+          <li>
+            <a href=""><i class="bi bi-line"></i></a>
+            <p>LINEでのお問い合わせ</p>
+            <a href="#" class="btn">
+              お問合せする
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="sns">
+        <h3>Follow us</h3>
+        <div>
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- news -->
+
+    <section class="news animate">
+      <div class="tytle">
+        <h2>INFORMATION</h2>
+        <p>お知らせ</p>
+      </div>
+
+      <div class="container">
         <ul>
           <li>
             <a href="#">
@@ -241,22 +351,13 @@
       </div>
     </section>
 
-
-    <section class="about-us">
-      <div class="container">
-        <h2>About us</h2>
-        <img src="img/hero3.png" alt="メインビジュアル画像">
-        <p>「品質」の「品」は、「相手への思いやりの度合い」</p>
-         <p> 私たちは、品質にこだわりを持ってお届けします。</p>
-          <p></p>
-      </div>
-
-    </section>
     
+
+    <!-- footer -->
 
     <footer>
       <div class="up">
-          <a href="#"><span>↑</span> うえへ</a>
+          <a href="#" id="to-top"><span>↑</span> うえへ</a>
       </div>
   
       <section class="adress">
@@ -301,6 +402,8 @@
       <section class="copyright">
           <small>Copyright ©️ Flower Market shiga. All Rights Reserved.</small>
       </section>
+
+      <!-- <img src="img/footer.png" alt=""> -->
   
     </footer>
 
