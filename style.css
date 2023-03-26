@@ -345,12 +345,20 @@ header nav li div p{
 
 
 
+/* category */
+
+.wave{
+  background: #f9f9f9;
+  padding: 32px 0;
+  margin-top: 16px;
+}
+
+
 /* ranking */
 
 .ranking{
   padding-top: 128px;
 }
-
 
 .ranking ul{
 margin-top: 32px;
@@ -589,6 +597,10 @@ transform: translate(-30%,-30%);
 
 /* sns */
 
+.contact .sns{
+  padding-top: 16px;
+}
+
 .contact .sns h3{
   font-family: var(--Mincho-font);
   font-size: 20px;
@@ -642,51 +654,43 @@ transform: translate(-30%,-30%);
 
 footer{
     background: #f4f5f4;
-    padding: 32px 0 16px;
+    padding-top: 32px;
     position: relative;
   }
+
+  /* footer up */
   
   footer .up{
     display: flex;
-    align-items: flex-end;
-    gap: 4px;
-    transform: translateY(-100%);
-  
+    transform: translateY(-100%); /* 自身の大きさ分上へ移動 */ 
     position: absolute;
     top: 0;
     right: 16px;
   }
 
-  footer .up p{
-    font-size: 8px;
-    color: #888;
-  }
-
   footer .up a{
-    font-size: 10px;
-    font-weight: bold;
-    color: #555;
+    display: flex;
+    gap: 8px;
+    align-items: center;
     background: #f4f5f4;
     padding: 8px 12px;
     border-radius: 2px;
-  
+    font-size: 8px;
+    color: #888;
     transition: background .5s, color .5s;
   }
   
   footer .up a:hover{
-    background: #333;
-    color: #fff;
+    background: #555;
+    color: white;
   }
   
-  footer .up a:hover > span{
-    color: #333;
-  }
-  
-  footer h2{
-    font-size: 60px;
-    letter-spacing: 4px;
-    padding-bottom: 16px;
-    text-align: center;
+
+
+  /* footer adress */
+
+  footer .adress{
+    padding-bottom: 8px;
   }
 
   footer .adress h3{
@@ -709,64 +713,113 @@ footer{
     font-size: 14px;
   }
   
-  footer .adress li{
-    padding-bottom: 16px;
+ 
+
+  /* footer guides */
+
+  footer .guides div{
+    margin-bottom: 16px;
+  }
+
+  footer .guides h3{
+    text-align: center;
+    font-size: 16px;
+    padding: 16px 0;
+    color: #333;
+    letter-spacing: 1px;
   }
   
-  footer .links div{
-    margin: 16px 32px 0;
-  }
-  
-  footer .links ul{
+  footer .guides ul{
     display: flex;
     flex-wrap: wrap;
-    column-gap: 32px;
+    gap: 32px;
+    margin-bottom: 32px;
   }
   
-  footer .links li{
+  footer .guides li{
     width: calc((100% - 64px) / 3);
     text-align: center;
-    border-top: 1px dotted #aaa;
+    display: flex;
+    flex-direction: column;
   }
   
-  /* 最後の3つに下線 */
-  footer .links li:nth-last-child(-n+3){
-    border-bottom: 1px dotted #aaa;
+
+  footer .guides i{
+    font-size: 24px;
+  }
+
+  footer .guides li p{
+    font-size: 14px;
+    padding-top: 8px;
   }
   
-  footer .links a{
+  footer .guides a{
     display: block;
     font-size: 14px;
     color: #555;
     letter-spacing: 1px;
-    padding: 12px 0;
-  
-    transition: background .8s;
+    padding: 16px 0;
+    background: white;
+    border-radius: 16px;
+    transition: opacity .3s, background .3s;
+  }
+
+  footer .guides a:hover{
+    opacity: .9;
+    /* background: rgb(216, 237, 216); */
+    background: #eee;
+  }
+
+  .guides img{
+    display: block;
+    margin-left:auto;
+    width: 300px;
   }
   
-  footer .links a:hover{
-    background: #fff;
-  }
-  
-  footer .sns{
-    display: flex;
-    justify-content: center;
-    gap: 32px;
-    font-size: 20px;
-    padding: 32px 0;
-  }
+
+
+  /* copyright */
   
   footer .copyright{
     font-size: 14px;
-    color: #888;
-    text-align: center;
-    padding-bottom: 8px;
+    background:darkolivegreen;
+    color: white;
+    padding: 16px 0;
   }
 
-  footer img{
-    width: 400px;
-    height: auto;
+  footer .copyright div{
+    display: flex;
+    align-items: center;
   }
+  
+  footer .copyright ul{
+    display: flex;
+    justify-content: center;
+  }
+
+  footer .copyright li{
+    padding: 0 16px;
+  }
+  
+  footer .copyright ul li:first-child{
+    border-right: 1px solid white;
+  }
+  
+  footer .copyright a{
+    transition: opacity .3s;
+  }
+
+  footer .copyright a:hover{
+    opacity: .7;
+  }
+  
+  footer .copyright small{
+  text-align: center;
+  padding: 0 8px;
+  margin-left: auto;
+  }
+
+
 
 
 
