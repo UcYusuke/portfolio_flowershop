@@ -7,7 +7,12 @@ body{
 :root{
     --Mincho-font:"游明朝", "YuMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "MS Ｐ明朝", "MS PMincho", serif;
     --Gothic-font:"游ゴシック体", "YuGothic", "游ゴシック", "Yu Gothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+    --original-light-gray:#f4f5f4;
+    --original-gray:#ccc;
+    --original-black:#333;
+    --accentcolor:darkgreen;
   }
+
 
 h1,
 h2,
@@ -63,9 +68,11 @@ a{
 .btn{
   display: flex;
   height:40px;
-  background: darkgreen;
+  background:var(--accentcolor);
   color: white;
+  border-radius: 20px;
   line-height: 40px;  
+  box-shadow: 0 1px 4px rgba(0,0,0,.2);
   transition: opacity .3s;
 }
 .btn p{
@@ -74,11 +81,42 @@ a{
   text-align: center;
 }
 .btn i{
-  margin: 0 8px 0 auto;
+  margin: 0 16px 0 auto;
 }
 .btn:hover{
   opacity: .7;
+
 }
+
+
+/* 3つずつ配列 */
+
+.three-array ul{
+  margin-top: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  }
+  
+  .three-array li{
+  width: calc((100% - 64px) / 3);
+  }
+  
+  .three-array li div{
+  position: relative;
+  }
+  
+  .three-array li img{
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  transition: transform .3s, opacity .3s;
+  }
+  
+  .three-array li img:hover{
+    transform: scale(1.05);
+    opacity: 0.7;
+  }
 
 
 
@@ -132,7 +170,7 @@ a{
 
 .overlay li{
   font-size: 18px;
-  color: #333;
+  color: var(--original-black);
   letter-spacing: 1px;
   padding-bottom: 20px;
 
@@ -186,7 +224,7 @@ header nav{
 header ul{
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 24px;
 }
 
 
@@ -335,7 +373,7 @@ header nav li div p{
 .top-menu li a{
     font-size: 16px;
     font-family: var(--Mincho-font);
-    color: #333;
+    color: var(--original-black);
     transition: color .3s;
 }
 
@@ -347,11 +385,30 @@ header nav li div p{
 
 /* category */
 
-.wave{
-  background: #f9f9f9;
+.category{
+  padding-top: 128px;
+}
+
+.category-back{
+  background: var(--original-light-gray);
   padding: 32px 0;
   margin-top: 16px;
 }
+
+.category li p{
+  font-size: 14px;
+  color:var(--original-black);
+  padding-top: 4px;
+  line-height: 2;
+  }
+
+  /* カテゴリ名 */
+.category li p:nth-of-type(1){
+  font-size: 16px;
+  text-align: center;
+  padding: 16px 0 8px;
+}
+
 
 
 /* ranking */
@@ -360,40 +417,14 @@ header nav li div p{
   padding-top: 128px;
 }
 
-.ranking ul{
-margin-top: 32px;
-display: flex;
-flex-wrap: wrap;
-gap: 32px;
-}
-
-.ranking li{
-width: calc((100% - 64px) / 3);
-}
-
-.ranking li div{
-position: relative;
-}
-
-.ranking li img{
-width: 100%;
-border-radius: 8px;
-margin-bottom: 8px;
-transition: transform .3s, opacity .3s;
-}
-
-.ranking li img:hover{
-  transform: scale(1.05);
-  opacity: 0.7;
-}
-
 .ranking li p{
 font-size: 14px;
-color: #555;
+color:var(--original-black);
 text-align: center;
 padding-top: 4px;
 }
 
+/* 数字の部分 */
 .ranking h3{
 width: 40px;
 height: 40px;
@@ -478,15 +509,20 @@ transform: translate(-30%,-30%);
   padding-top: 128px;
 }
 
+.aboutus div+div{
+  height: 800px;
+}
+
 .aboutus ul{
   display: flex;
   justify-content: center;
   margin-top: 32px;
-  gap: 32px;
+  height: 100%;
 }
 
 .aboutus ul li{
-  width: calc((100% - 32px) / 2);
+  width: calc((100%) / 2);
+  height: 100%;
 }
 
 .aboutus ul li img{
@@ -497,35 +533,33 @@ transform: translate(-30%,-30%);
 
 .aboutus ul div{
   box-sizing: border-box;
-  background: #f2f7f1;
+  background: #f9f9f9;
   height: 100%;
-  padding: 16px;
+  padding: 32px;
 }
 
 .aboutus ul div h3{
+  font-size: 20px;
+  color: var(--original-black);
   font-family: var(--Mincho-font);
-  text-align: center;
+  font-weight: bold;
+  padding-bottom: 8px;
 }
 
-.aboutus ul div h3,
 .aboutus ul div p{
-  color: #555;
-  padding-bottom: 4px;
-}
-
-.aboutus section:nth-of-type(1) p{
-  font-size: 12px;
-  text-align: center;
-}
-
-.aboutus section:nth-of-type(1) p:last-child{
-  margin-bottom: 8px;
-}
-
-.aboutus section:nth-of-type(2) p{
   font-size: 14px;
-  line-height: 1.5;
-  padding-top: 8px;
+  color: var(--original-black);
+  line-height: 2;
+}
+
+/* キーメッセージ */
+.aboutus section:nth-of-type(2) .key-message{
+  font-size: 16px;
+  padding: 40px 0;
+}
+/* 文章の部分 */
+.aboutus section:nth-of-type(2) p{
+  padding-bottom: 24px;
 }
 
 
@@ -540,7 +574,7 @@ transform: translate(-30%,-30%);
   display: flex;
   justify-content: center;
   height: 240px;
-  color: #333;
+  color: var(--original-black);
 }
 
 .contact ul{
@@ -560,7 +594,7 @@ transform: translate(-30%,-30%);
 }
 
 .contact ul li:last-child{
-  border-right: 1px solid #ccc;
+  border-right: 1px solid var(--original-gray);
 }
 
 /* アイコン部分 */
@@ -571,18 +605,18 @@ transform: translate(-30%,-30%);
   line-height: 60px;
   border-radius: 50%;
   font-size: 32px;
-  color: darkolivegreen;
+  color: var(--accentcolor);
   background: #f2f7f1;
   margin-bottom: 16px;
 }
 
 .contact .btn{
-  width: 80%;
+  width: 70%;
   margin-top: 16px;
 }
 
 .contact .PhoneNumber{
-  color: darkolivegreen;
+  color: var(--accentcolor);
   font-size: 24px;
   letter-spacing: 1px;
   font-weight: bold;
@@ -625,12 +659,12 @@ transform: translate(-30%,-30%);
 }
 
 .news li{
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid var(--original-gray);
     padding: 16px 0;
 }
 
 .news ul p{
-    color: #333;
+    color: var(--original-black);
     line-height: 1.5;
 }
 
@@ -653,7 +687,7 @@ transform: translate(-30%,-30%);
   /* footer */
 
 footer{
-    background: #f4f5f4;
+    background: var(--original-light-gray);
     padding-top: 32px;
     position: relative;
   }
@@ -672,17 +706,16 @@ footer{
     display: flex;
     gap: 8px;
     align-items: center;
-    background: #f4f5f4;
-    padding: 8px 12px;
+    background: var(--original-light-gray);
+    padding: 8px 16px;
     border-radius: 2px;
-    font-size: 8px;
-    color: #888;
-    transition: background .5s, color .5s;
+    font-size: 12px;
+    color:var(--original-black);
+    transition: transform .5s;
   }
   
   footer .up a:hover{
-    background: #555;
-    color: white;
+    transform: translateY(8px);
   }
   
 
@@ -699,7 +732,7 @@ footer{
   
   footer .adress h3,
   footer .adress p{
-    color: #555;
+    color: var(--original-black);
     padding-bottom: 4px;
     text-align: center;
   }
@@ -756,7 +789,7 @@ footer{
   footer .guides a{
     display: block;
     font-size: 14px;
-    color: #555;
+    color: var(--original-black);
     letter-spacing: 1px;
     padding: 16px 0;
     background: white;
@@ -766,7 +799,6 @@ footer{
 
   footer .guides a:hover{
     opacity: .9;
-    /* background: rgb(216, 237, 216); */
     background: #eee;
   }
 
@@ -782,7 +814,7 @@ footer{
   
   footer .copyright{
     font-size: 14px;
-    background:darkolivegreen;
+    background:var(--accentcolor);
     color: white;
     padding: 16px 0;
   }
