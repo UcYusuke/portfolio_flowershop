@@ -99,18 +99,18 @@ a{
   }
   
   .three-array li{
-  width: calc((100% - 64px) / 3);
+    width: calc((100% - 64px) / 3);
   }
   
   .three-array li div{
-  position: relative;
+    position: relative;
   }
   
   .three-array li img{
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 8px;
-  transition: transform .3s, opacity .3s;
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    transition: transform .3s, opacity .3s;
   }
   
   .three-array li img:hover{
@@ -372,7 +372,8 @@ header nav li div p{
 
 .top-menu li a{
     font-size: 16px;
-    font-family: var(--Mincho-font);
+    font-family: var(--Gothic-font);
+    font-weight: bold;
     color: var(--original-black);
     transition: color .3s;
 }
@@ -383,31 +384,93 @@ header nav li div p{
 
 
 
+/* メインビジュアル */
+.mainvisual img{
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+
+
 /* category */
 
 .category{
-  padding-top: 128px;
+  margin-top:64px;
 }
 
 .category-back{
   background: var(--original-light-gray);
   padding: 32px 0;
-  margin-top: 16px;
+  margin-top: 32px;
+
 }
 
-.category li p{
+.category-box ul{
+  width: 90%;
+  margin: 0 auto;
+}
+
+.category-box li p{
   font-size: 14px;
   color:var(--original-black);
-  padding-top: 4px;
   line-height: 2;
+  padding: 0 4px;
   }
 
   /* カテゴリ名 */
-.category li p:nth-of-type(1){
+.category-box li p:nth-of-type(1){
   font-size: 16px;
   text-align: center;
   padding: 16px 0 8px;
 }
+
+/* タブメニュー用 */
+.tab-menu{
+  display: flex;
+  margin: 32px;
+  justify-content: center;
+}
+
+.tab-menu li{
+  width:40% ;
+  max-width: 300px;
+}
+
+.tab-menu li a{
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 8px 0;
+  background: var(--original-gray);
+  color: var(--original-black);
+}
+
+/* アクティブなタブ */
+.tab-menu li a.active{
+  background: var(--original-black);
+  color: #fff;
+}
+
+/* アクティブでないタブ */
+.tab-menu li a:not(.active){
+  transition: opacity .3s;
+}
+.tab-menu li a:not(.active):hover{
+  opacity: .7;
+}
+
+/* activeクラスをつけたコンテンツを表示 */
+.content.active{
+  /* background: var(--original-light-gray); */
+  display: block;
+}
+/* activeクラスがついていないコンテンツは非表示 */
+.content{
+  display: none;
+}
+
+
 
 
 

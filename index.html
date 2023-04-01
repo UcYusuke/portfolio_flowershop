@@ -69,60 +69,106 @@
     <section class="top-menu">
       <ul>
         <li>
-          <a href="#">アレンジメント</a>
+          <a href="#">スタイルから探す</a>
         </li>
         <li>
-          <a href="#">花束</a>
+          <a href="#">花の種類から探す</a>
         </li>
         <li>
-          <a href="#">スタンド花</a>
+          <a href="#">色合いから探す</a>
         </li>
         <li>
-          <a href="#">観葉植物</a>
+          <a href="#">価格から探す</a>
         </li>
       </ul>   
     </section>
 
 
 
+    <!-- main visual -->
+
+    <div class="mainvisual">
+      <img src="img/mainvisual.png" alt="メイン画像">
+    </div>
+
+
     <!-- category -->
 
-    <section class="category three-array animate">
+    <section class="category animate">
       <div class="tytle">
         <h2>CATEGORY</h2>
         <p>用途で探す</p>
-      </div>
+      </div>      
 
       <div class="category-back">
-        <div class="container">
-          <ul>
-            <li>
-              <a href="">
-                <img src="img/category-arangement.png" alt="">
-                <p>アレンジメント</p>
-                <p>大事な記念日に、特別な空間を華やかに彩ります。<br>ご予算・ご要望に合わせてプロのデザイナーが旬のお花でお作りします</p>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <img src="img/category-bouque.png" alt="">
-                <p>花束</p>
-                <p>大切な人への贈り物、送別会や歓迎会など、持ち帰りに便利な花束は、さまざまなシチュエーションでのプレゼントに最適です</p>
-              </a>
-            </li>
-            <li>
-              <a href="">
-                <img src="img/category-plant.png" alt="">
-                <p>観葉植物</p>
-                <p>リラックス効果がある観葉植物は、インテリアとしてもおすすめです。<br>ご自宅はもちろん、オフィスや店舗にも飾っていただけます。</p>
-              </a>
-            </li>
+          <!-- タブメニュー -->
+          <ul class="tab-menu">
+            <li ><a href="#" class="active" data-id="styles">スタイル</a></li>
+            <li><a href="#" data-id="kinds">花の種類</a></li>
           </ul>
+        
+          <!-- タブメニューのコンテンツ -->
+          <section class="content active" id="styles">
+              <div class="three-array container category-box">
+                <ul>
+                  <li>
+                    <a href="">
+                      <img src="img/category-arangement.png" alt="">
+                      <p>アレンジメント</p>
+                      <p>大事な記念日に、特別な空間を華やかに彩ります。<br>ご予算・ご要望に合わせてプロのデザイナーが旬のお花でお作りします。</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <img src="img/category-bouque.png" alt="">
+                      <p>花束</p>
+                      <p>持ち帰りに便利な花束は、送別会や歓迎会など、さまざまなシチュエーションでのプレゼントに最適です。</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <img src="img/category-plant.png" alt="">
+                      <p>観葉植物</p>
+                      <p>リラックス効果がある観葉植物は、インテリアとしてもおすすめです。<br>ご自宅はもちろん、オフィスや店舗にも飾っていただけます。</p>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+          </section>
+            
+          <section class="content" id="kinds">
+              <div class="container three-array category-box">
+                <ul>
+                  <li>
+                    <a href="">
+                      <img src="img/category-rose.png" alt="">
+                      <p>バラ (通年) </p>
+                      <p>プレゼント定番のバラの花言葉は、「美」「愛」</p>
+                      <p>誕生日など特別な日のお祝いや、いい夫婦の日など、大切な人に贈り物にオススメです。</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <img src="img/category-tulip.png" alt="">
+                      <p>チューリップ (季節・春)</p>
+                      <p>春を告げるチューリップの花言葉は、「思いやり」</p>
+                      <p>誕生祝や就職・卒業祝い、入学・卒業祝いなどさまざまなシーンで選ばれており、老若男女問わずオススメです。</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <img src="img/category-kocyouran.png" alt="">
+                      <p>コチョウラン (通年)</p>
+                      <p>華やかなコチョウランの花言葉は、「幸福が飛んでくる」</p>
+                      <p>開店祝いなどのお祝いに最適なギフトです。</p>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+          </section>
+
         </div>
-      </div>
     </section>
-
-
 
     <!-- ranking -->
 

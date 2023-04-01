@@ -88,4 +88,38 @@
 
 
 
+
+    //タブメニュー
+    const menuItems = document.querySelectorAll('.tab-menu li a');
+    const contents = document.querySelectorAll('.content');
+
+    menuItems.forEach(clickedItem =>{
+        clickedItem.addEventListener('click',e =>{
+            //a要素のリンク先へページ遷移するという規定動作をキャンセル
+            e.preventDefault(); 
+
+            //まず全てのa要素からactiveクラスを外す
+            menuItems.forEach(item =>{
+                item.classList.remove('active')
+            });
+
+            //クリックされたa要素にactiveクラスをつける
+            clickedItem.classList.add('active');
+
+            //まず全てのcontentからactiveクラスを外す
+            contents.forEach(content =>{
+                content.classList.remove('active')
+            });
+
+            //クリックされたa要素につけられているdata-idと、同じ名前のIDを持つcontentを取得
+            //「clickedItem.dataset.id」が、クリックされたa要素につけられているdata-id="***"の「***」部分
+            //取得した同じIDを持つcontent要素に、activeクラスをつける
+            document.getElementById(clickedItem.dataset.id).classList.add('active')
+        });
+    });
+
+
+
+
+
 }
