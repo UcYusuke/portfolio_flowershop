@@ -61,7 +61,7 @@ a{
 }
 
 .container{
-    margin: 0 40px;
+    margin: 0 32px;
 }
 
 /* ボタン */
@@ -92,7 +92,8 @@ a{
 /* 3つずつ配列 */
 
 .three-array ul{
-  margin-top: 32px;
+  width: 90%;
+  margin: 32px auto 0;
   display: flex;
   flex-wrap: wrap;
   gap: 32px;
@@ -387,7 +388,7 @@ header nav li div p{
 /* メインビジュアル */
 .mainvisual img{
   width: 100%;
-  height: 400px;
+  height: auto;
   object-fit: cover;
 }
 
@@ -407,7 +408,7 @@ header nav li div p{
 }
 
 .category-box ul{
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -641,7 +642,7 @@ transform: translate(-30%,-30%);
 }
 
 .contact ul{
-  width: 100%;
+  width: 90%;
   display: flex;
   justify-content: center;
   margin-top: 32px;
@@ -719,6 +720,11 @@ transform: translate(-30%,-30%);
 
 .news{
     padding: 128px 0;
+}
+
+.news ul{
+  width: 90%;
+  margin: 0 auto;
 }
 
 .news li{
@@ -826,10 +832,11 @@ footer{
   }
   
   footer .guides ul{
+    width: 90%;
     display: flex;
     flex-wrap: wrap;
     gap: 32px;
-    margin-bottom: 32px;
+    margin: 0 auto 32px;
   }
   
   footer .guides li{
