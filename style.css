@@ -103,9 +103,7 @@ a{
     width: calc((100% - 64px) / 3);
   }
   
-  .three-array li div{
-    position: relative;
-  }
+
   
   .three-array li img{
     width: 100%;
@@ -119,6 +117,28 @@ a{
     opacity: 0.7;
   }
 
+/* 商品情報 */
+.product-information p{
+  font-size: 14px;
+  color:var(--original-black);
+  text-align: center;
+  padding-top: 4px;
+}
+  /* 商品名 */
+.products-name{
+  font-weight: bold;
+}
+/* 値段 */
+.value::before{
+  font-size: 14px;
+  margin-right: 2px;
+  content: '¥';
+}
+.value::after{
+  font-size: 12px;
+  margin-left: 4px;
+  content: '税込';
+}
 
 
 /* ハンバーガーメニュー */
@@ -197,7 +217,7 @@ a{
 
 
 
-/* header */
+/* ヘッダー部分 */
 
 header{
   box-sizing: border-box;
@@ -362,7 +382,7 @@ header nav li div p{
 
 
 
-/* top-menu */
+/* トップメニュー */
 
 .top-menu ul{
   display: flex;
@@ -376,6 +396,7 @@ header nav li div p{
     font-family: var(--Gothic-font);
     font-weight: bold;
     color: var(--original-black);
+    /* color: white; */
     transition: color .3s;
 }
 
@@ -394,7 +415,7 @@ header nav li div p{
 
 
 
-/* category */
+/* カテゴリー セクション */
 
 .category{
   margin-top:64px;
@@ -451,6 +472,7 @@ header nav li div p{
 .tab-menu li a.active{
   background: var(--original-black);
   color: #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,.2);
 }
 
 /* アクティブでないタブ */
@@ -475,99 +497,102 @@ header nav li div p{
 
 
 
-/* ranking */
+/* ランキング セクション */
 
 .ranking{
   padding-top: 128px;
 }
 
-.ranking li p{
-font-size: 14px;
-color:var(--original-black);
-text-align: center;
-padding-top: 4px;
+/* 順位の数字部分の親要素 */
+.ranking li div:first-child{
+  position: relative; 
 }
 
-/* 数字の部分 */
+/* 順位の数字部分 */
 .ranking h3{
-width: 40px;
-height: 40px;
-line-height: 40px;
-color: white;
-text-align: center;
-border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  color: white;
+  text-align: center;
+  border-radius: 50%;
 
-position: absolute;
-top: 0;
-left:0;
-transform: translate(-30%,-30%);
+  /* 左上に配置 */
+  position: absolute;
+  top: 0;
+  left:0;
+  transform: translate(-30%,-30%);
 }
 
+/* 1位 */
 .ranking li:nth-child(1) h3{
     background: darkgoldenrod;
 }
+/* 2位 */
 .ranking li:nth-child(2) h3{
     background: gray;
 }
+/* 3位 */
 .ranking li:nth-child(3) h3{
     background: darkred;
 }
+/* 4位以降 */
 .ranking li:nth-child(n + 4) h3{
     background: darkgreen;
 }
 
 
-/* new items */
+
+/* 新商品 セクション */
 
 .new-items{
     padding-top: 128px;
 }
 
-.new-items ul{
-    margin-top: 32px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 16px;
-}
-
-.new-items li div{
-    position: relative;
-}
-
-.new-items li p{
-    padding: 4px 8px;
-    font-size: 12px;
-    background:white;
-    border-radius: 4px;
-    text-align: center;
-
-    position: absolute;
-    bottom: 8px;
-    right: 8px;
-}
-
-.new-items li img{
+.slide-items {
     width: 100%;
+    display: flex;
+    max-width: 88%;
+    margin:32px auto 0;
+    padding: 0;
+  }
+  
+  .slide-items li {
+    height: auto;
+    margin-right: 8px;
+    margin-left: 8px;
+  }
+  
+  .slide-items img {
+    width: 100%;
+    height: 100%;
     border-radius: 8px;
-    transition: transform .3s, opacity .3s;
-}
+    object-fit: cover;
+    transition: opacity .3s;
+  }
 
-.new-items li img:hover{
-  transform: scale(1.05);
-  opacity: 0.7;
-}
+  .slide-items img:hover{
+    opacity: 0.7;
+  }
+  
+  .slick-prev:before,
+  .slick-next:before {
+    color: black;
+  }
+  
+  .slick-dots {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 
-.new-items li:nth-child(-n + 2){
-    width: calc((100% - 32px) / 2);
-}
-.new-items li:nth-child(n + 3){
-    width: calc((100% - 48px) / 4);
-}
+  .slick-dots li button:before {
+    font-size: 16px;
+    top: 6px;
+  }
 
 
 
-/* about us */
+/* aboutus セクション */
 
 .aboutus{
   padding-top: 128px;
@@ -622,7 +647,7 @@ transform: translate(-30%,-30%);
 
 
 
-/* contact */
+/* contact セクション */
 
 .contact{
   margin-top: 128px;
@@ -710,7 +735,7 @@ transform: translate(-30%,-30%);
 
 
 
-/* information */
+/* information セクション */
 
 .news{
     padding: 128px 0;

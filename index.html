@@ -9,6 +9,8 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
     rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v6.3.0/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="img/favicon.png">
 </head>
@@ -183,60 +185,72 @@
           <li class="animate">
             <a href="#">
               <div>
-                <img src="img/ranking1.png" alt="Bouquet1">
+                <img src="img/ranking1.png" alt="ランキング1位">
                 <h3>1</h3>
-                <p>Bouquet</p>
-                <p>2,500円</p>
+              </div>
+              <div class="product-information">
+                <p class="products-name">Arangement</p>
+                <p class="value">1,750円</p>
               </div>
             </a>
           </li>
           <li class="animate delay">
             <a href="#">
-              <div>
-                <img src="img/ranking2.png" alt="Bouquet1">
-                <h3>2</h3>
-                <p>Bouquet</p>
-                <p>2,500円</p>
-              </div>
+                <div>
+                  <img src="img/ranking2.png" alt="ランキング2位">
+                  <h3>2</h3>
+                </div>
+                <div class="product-information">
+                  <p class="products-name">Bouquet</p>
+                  <p class="value">1,500円</p>
+                </div>
             </a>
           </li>
           <li class="animate delay-more">
             <a href="#">
               <div>
-                <img src="img/ranking3.png" alt="Bouquet1">
+                <img src="img/ranking3.png" alt="ランキング3位">
                 <h3>3</h3>
-                <p>Bouquet</p>
-                <p>2,500円</p>
+              </div>
+              <div class="product-information">
+                <p class="products-name">Arangement</p>
+                <p class="value">2,200円</p>
               </div>
             </a>
           </li>
           <li class="animate">
             <a href="#">
               <div>
-                <img src="img/ranking4.png" alt="Bouquet1">
+                <img src="img/ranking4.png" alt="ランキング4位">
                 <h3>4</h3>
-                <p>Bouquet</p>
-                <p>2,500円</p>
+              </div>
+              <div class="product-information">
+                <p class="products-name">Arangement</p>
+                <p class="value">2,500円</p>
               </div>
             </a>
           </li>
           <li class="animate delay">
             <a href="#">
               <div>
-                <img src="img/ranking5.png" alt="Bouquet1">
+                <img src="img/ranking5.png" alt="ランキング5位">
                 <h3>5</h3>
-                <p>Bouquet</p>
-                <p>2,500円</p>
+              </div>
+              <div class="product-information">
+                <p class="products-name">Bouquet</p>
+                <p class="value">1,000円</p>
               </div>
             </a>
           </li>
           <li class="animate delay-more">
             <a href="#">
               <div>
-                <img src="img/ranking6.png" alt="Bouquet1">
+                <img src="img/ranking6.png" alt="ランキング6位">
                 <h3>6</h3>
-                <p>Bouquet</p>
-                <p>2,500円</p>
+              </div>
+              <div class="product-information">
+                <p class="products-name">Bouquet</p>
+                <p class="value">1,200円</p>
               </div>
             </a>
           </li>
@@ -254,46 +268,58 @@
         <p>新着商品</p>
       </div>
 
-      <div class="container">
-        <ul>
-          <li>
-            <div>
-              <a href="#">
-                <img src="img/new-item1.png" alt="Bouquet1">
-                <p>Bouquet ¥2,400</p>
-              </a>
-            </div>
-          </li>
-          <li>
-            <div>
-              <a href="#">
-                  <img src="img/new-item2.png" alt="Bouquet1">
-                  <p>Bouquet ¥2,400</p>
-              </a>
-            </div>
-          </li>
+      <div class="conatainer">
+
+        <ul class="slide-items">
           <li>
             <a href="#">
-                <img src="img/new-item3.png" alt="Bouquet1">
+              <img src="img/new-item2.png" alt="新商品">
+              <div class="product-information">
+                <p class="products-name">Bouquet</p>
+                <p class="value">1,400円</p>
+              </div>
             </a>
           </li>
           <li>
             <a href="#">
-                <img src="img/new-item4.png" alt="Bouquet1">
+              <img src="img/new-item3.png" alt="新商品">
+              <div class="product-information">
+                <p class="products-name">Arangement</p>
+                <p class="value">2,100円</p>
+              </div>
             </a>
           </li>
           <li>
             <a href="#">
-                <img src="img/new-item5.png" alt="Bouquet1">
+              <img src="img/new-item4.png" alt="新商品">
+              <div class="product-information">
+                <p class="products-name">Bouquet</p>
+                <p class="value">1,500円</p>
+              </div>
             </a>
           </li>
           <li>
             <a href="#">
-                <img src="img/new-item6.png" alt="Bouquet1">
+              <img src="img/new-item5.png" alt="新商品">
+              <div class="product-information">
+                <p class="products-name">Arangement</p>
+                <p class="value">1,300円</p>
+              </div>
             </a>
           </li>
-        </ul> 
+          <li>
+            <a href="#">
+              <img src="img/new-item6.png" alt="新商品1">
+              <div class="product-information">
+                <p class="products-name">Arangement</p>
+                <p class="value">2,400円</p>
+              </div>
+            </a>
+          </li>
+
+        </ul>
       </div>
+       
     </section>
 
 
@@ -502,6 +528,8 @@
 
     </footer>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="js/main.js"></script>
  
     
