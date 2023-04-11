@@ -20,6 +20,76 @@
 
 
 
+
+
+    //グローバルメニュー
+
+    //親メニューの要素を取得
+    const ParentMenu = document.querySelectorAll('.parent-menu')
+
+    ParentMenu.forEach(element =>{
+
+        //マウスホバーした親メニューの子メニューに、activeクラスをつける
+        element.addEventListener('mouseover',() =>{
+            element.querySelector('.child-menu').classList.add('active')
+        });
+
+        //マウスホバーを外したとき、activeクラスを外す
+        element.addEventListener('mouseout',() =>{
+            element.querySelector('.child-menu').classList.remove('active')
+        });
+
+    });
+
+
+
+
+
+    //タブメニュー
+    const menuItems = document.querySelectorAll('.tab-menu li a');
+    const contents = document.querySelectorAll('.content');
+
+    menuItems.forEach(clickedItem =>{
+        clickedItem.addEventListener('click',e =>{
+            //a要素のリンク先へページ遷移するという規定動作をキャンセル
+            e.preventDefault(); 
+
+            //まず全てのa要素からactiveクラスを外す
+            menuItems.forEach(item =>{
+                item.classList.remove('active')
+            });
+
+            //クリックされたa要素にactiveクラスをつける
+            clickedItem.classList.add('active');
+
+            //まず全ての「content」からactiveクラスを外す
+            contents.forEach(content =>{
+                content.classList.remove('active')
+            });
+
+            //クリックされたa要素につけられているdata-idと、同じ名前のIDを持つcontentを取得
+            //「clickedItem.dataset.id」が、クリックされたa要素につけられているdata-id="***"の「***」部分
+            //取得した同じIDを持つcontent要素に、activeクラスをつける
+            document.getElementById(clickedItem.dataset.id).classList.add('active')
+        });
+    });
+
+
+
+
+    //スライダー
+    $(".slide-items").slick({
+        autoplay:true,
+        slidesToShow:3,
+        infinite:true,
+        slidesToScroll:1,
+        dots:true,
+      });
+
+
+
+
+    
     //スクロールしたときに下からふわっと表示
 
     //交差したときに呼び出す関数
@@ -43,6 +113,8 @@
     document.querySelectorAll('.animate').forEach(el =>{
         InviewObserver.observe(el);
     });
+
+
 
 
 
@@ -70,6 +142,8 @@
     OnscrollObserver.observe(document.getElementById('target'))
 
     
+    
+
 
     //上へをクリックしたとき、スルスルっと戻る
 
@@ -87,47 +161,6 @@
     });
 
 
-
-
-    //タブメニュー
-    const menuItems = document.querySelectorAll('.tab-menu li a');
-    const contents = document.querySelectorAll('.content');
-
-    menuItems.forEach(clickedItem =>{
-        clickedItem.addEventListener('click',e =>{
-            //a要素のリンク先へページ遷移するという規定動作をキャンセル
-            e.preventDefault(); 
-
-            //まず全てのa要素からactiveクラスを外す
-            menuItems.forEach(item =>{
-                item.classList.remove('active')
-            });
-
-            //クリックされたa要素にactiveクラスをつける
-            clickedItem.classList.add('active');
-
-            //まず全てのcontentからactiveクラスを外す
-            contents.forEach(content =>{
-                content.classList.remove('active')
-            });
-
-            //クリックされたa要素につけられているdata-idと、同じ名前のIDを持つcontentを取得
-            //「clickedItem.dataset.id」が、クリックされたa要素につけられているdata-id="***"の「***」部分
-            //取得した同じIDを持つcontent要素に、activeクラスをつける
-            document.getElementById(clickedItem.dataset.id).classList.add('active')
-        });
-    });
-
-
-
-    //スライダー
-    $(".slide-items").slick({
-        autoplay:true,
-        slidesToShow:3,
-        infinite:true,
-        slidesToScroll:1,
-        dots:true,
-      });
 
 
 }

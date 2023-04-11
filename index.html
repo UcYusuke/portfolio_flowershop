@@ -66,28 +66,119 @@
       </div>
 
 
-    <!-- top-menu -->
+    <!-- グローバルメニュー -->
 
-    <section class="top-menu">
-      <ul>
-        <li>
-          <a href="#">スタイルから探す</a>
-        </li>
-        <li>
-          <a href="#">花の種類から探す</a>
-        </li>
-        <li>
-          <a href="#">色合いから探す</a>
-        </li>
-        <li>
-          <a href="#">価格から探す</a>
-        </li>
-      </ul>   
-    </section>
+    <section class="grobal-menu">
+      <nav>
+          <ul>
+              <li class="parent-menu">
+                  <a href="#">スタイルから探す<i class="fa-solid fa-chevron-down"></i></a>
+                  <div class="child-menu">
+                      <ul>
+                          <li>
+                              <a href="">
+                                <img src="img/category-arangement.png" alt="アレンジメント">
+                                <p>アレンジメント</p>
+                              </a>
+                          </li>
+                          <li>
+                              <a href="">
+                                <img src="img/category-bouque.png" alt="花束">
+                                <p>花束</p>
+                              </a>
+                          </li>
+                          <li>
+                            <a href="">
+                              <img src="img/category-plant.png" alt="観葉植物">
+                              <p>観葉植物</p>
+                            </a>
+                          </li>
+                      </ul>
+                  </div>
+              </li>
+              <li class="parent-menu">
+                  <a href="#">花の種類から探す<i class="fa-solid fa-chevron-down"></i></a>
+                  <div class="child-menu">
+                      <ul>
+                          <li>
+                              <a href="">
+                                <img src="img/category-rose.png" alt="バラ（通年）">
+                                <p>バラ（通年）</p>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="">
+                                <img src="img/category-tulip.png" alt="チューリップ（季節・春）">
+                                <p>チューリップ（季節・春）</p>
+                              </a>
+                            </li>
+                          <li>
+                              <a href="">
+                                <img src="img/category-kocyouran.png" alt="コチョウラン（通年）">
+                                <p>コチョウラン（通年）</p>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li class="parent-menu">
+                        <a href="#">色合いから探す<i class="fa-solid fa-chevron-down"></i></a>
+                        <div class="child-menu">
+                          <ul>
+                            <li>
+                              <a href="">
+                                <img src="img/category-pink.png" alt="レッド・ピンク系">
+                                <p>レッド・ピンク系</p>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="">
+                                <img src="img/category-yellow.png" alt="イエロー・オレンジ系">
+                                <p>イエロー・オレンジ系</p>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="">
+                                <img src="img/category-purple.png" alt="ブルー・パープル系">
+                                <p>ブルー・パープル系</p>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="">
+                                <img src="img/category-white.png" alt="ホワイト系">
+                                <p>ホワイト系</p>
+                              </a>
+                          </li>
+                      </ul>
+                  </li>
+                  </div>
+              <li class="parent-menu">
+                  <a href="#">予算から探す<i class="fa-solid fa-chevron-down"></i></a>
+                  <div class="child-menu">
+                      <ul class="text-category">
+                          <li>
+                              <a href="">1,000円〜2,000円未満</a>
+                          </li>
+                          <li>
+                              <a href="">2,000円〜3,000円未満</a>
+                          </li>
+                          <li>
+                              <a href="">3,000円〜</a>
+                          </li>
+                          <li>
+                              <a href="">オーダーメイド</a>
+                          </li>
+                      </ul>
+                  </div>
+              </li>
+          </ul>
+      </nav>
+  </section>
+   
 
 
 
-    <!-- main visual -->
+    <!-- メインビジュアル -->
 
     <div class="mainvisual container">
       <img src="img/mainvisual.png" alt="メイン画像">
@@ -105,31 +196,31 @@
       <div class="category-back">
           <!-- タブメニュー -->
           <ul class="tab-menu">
-            <li ><a href="#" class="active" data-id="styles">スタイル</a></li>
-            <li><a href="#" data-id="kinds">花の種類</a></li>
+            <li><a href="#" class="active right" data-id="category-styles">スタイル</a></li>
+            <li><a href="#" class="left" data-id="category-kinds">花の種類</a></li>
           </ul>
         
           <!-- タブメニューのコンテンツ -->
-          <section class="content active" id="styles">
+          <section class="content active" id="category-styles">
               <div class="three-array container category-box">
                 <ul>
                   <li>
                     <a href="">
-                      <img src="img/category-arangement.png" alt="">
+                      <img src="img/category-arangement.png" alt="アレンジメント">
                       <p>アレンジメント</p>
                       <p>大事な記念日に、特別な空間を華やかに彩ります。<br>ご予算・ご要望に合わせてプロのデザイナーが旬のお花でお作りします。</p>
                     </a>
                   </li>
                   <li>
                     <a href="">
-                      <img src="img/category-bouque.png" alt="">
+                      <img src="img/category-bouque.png" alt="花束">
                       <p>花束</p>
                       <p>持ち帰りに便利な花束は、送別会や歓迎会など、さまざまなシチュエーションでのプレゼントに最適です。</p>
                     </a>
                   </li>
                   <li>
                     <a href="">
-                      <img src="img/category-plant.png" alt="">
+                      <img src="img/category-plant.png" alt="観葉植物">
                       <p>観葉植物</p>
                       <p>リラックス効果がある観葉植物は、インテリアとしてもおすすめです。<br>ご自宅はもちろん、オフィスや店舗にも飾っていただけます。</p>
                     </a>
@@ -138,12 +229,12 @@
               </div>
           </section>
             
-          <section class="content" id="kinds">
+          <section class="content" id="category-kinds">
               <div class="container three-array category-box">
                 <ul>
                   <li>
                     <a href="">
-                      <img src="img/category-rose.png" alt="">
+                      <img src="img/category-rose.png" alt="バラ">
                       <p>バラ (通年) </p>
                       <p>プレゼント定番のバラの花言葉は、「美」「愛」</p>
                       <p>誕生日など特別な日のお祝いや、いい夫婦の日など、大切な人に贈り物にオススメです。</p>
@@ -151,7 +242,7 @@
                   </li>
                   <li>
                     <a href="">
-                      <img src="img/category-tulip.png" alt="">
+                      <img src="img/category-tulip.png" alt="チューリップ">
                       <p>チューリップ (季節・春)</p>
                       <p>春を告げるチューリップの花言葉は、「思いやり」</p>
                       <p>春生まれの方の誕生祝や就職・卒業祝い、入学・卒業祝いなどさまざまなシーンで選ばれています。</p>
@@ -159,7 +250,7 @@
                   </li>
                   <li>
                     <a href="">
-                      <img src="img/category-kocyouran.png" alt="">
+                      <img src="img/category-kocyouran.png" alt="コチョウラン">
                       <p>コチョウラン (通年)</p>
                       <p>華やかなコチョウランの花言葉は、「幸福が飛んでくる」</p>
                       <p>開店祝いなどのお祝いに最適なギフトです。</p>
