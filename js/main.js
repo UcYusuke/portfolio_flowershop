@@ -2,7 +2,7 @@
 
 {
 
-    //ハンバーガーメニュー
+    //----------------ハンバーガーメニュー----------------
 
     const open = document.getElementById('open');
     const overlay = document.querySelector('.overlay')
@@ -22,7 +22,7 @@
 
 
 
-    //グローバルメニュー
+    //----------------グローバルメニュー----------------
 
     //親メニューの要素を取得
     const ParentMenu = document.querySelectorAll('.parent-menu')
@@ -45,7 +45,7 @@
 
 
 
-    //タブメニュー
+    //----------------タブメニュー----------------
     const menuItems = document.querySelectorAll('.tab-menu li a');
     const contents = document.querySelectorAll('.content');
 
@@ -77,7 +77,7 @@
 
 
 
-    //スライダー
+    //----------------スライダー----------------
     $(".slide-items").slick({
         autoplay:true,
         slidesToShow:3,
@@ -90,7 +90,7 @@
 
 
     
-    //スクロールしたときに下からふわっと表示
+    //----------------スクロールしたときに下からふわっと表示----------------
 
     //交差したときに呼び出す関数
     function InviewCallback(entries,obs){
@@ -118,7 +118,7 @@
 
 
 
-    //スクロールされたときheaderにスタイルをつける
+    //----------------スクロールされたときheaderにスタイルをつける----------------
 
     const header = document.querySelector('header') //ヘッダーの要素を取得
 
@@ -142,10 +142,10 @@
     OnscrollObserver.observe(document.getElementById('target'))
 
     
-    
 
 
-    //上へをクリックしたとき、スルスルっと戻る
+
+    //----------------上へをクリックしたとき、スルスルっと戻る----------------
 
     const toTop = document.getElementById('to-top') //ID to-topの要素を取得
 
@@ -161,6 +161,31 @@
     });
 
 
+
+
+
+    //----------------アコーディオンUI----------------
+
+    const dts = document.querySelectorAll('dt');
+
+    dts.forEach(dt=>{
+
+    //dtがクリックされたとき
+    dt.addEventListener('click',()=>{
+        dt.parentNode.classList.toggle('show'); //dtの親要素divにクラスをつける
+        
+        //クリックした要素以外を閉じる
+        dts.forEach(el =>{
+            //クリックされた要素dtと、全てのdt要素を順に取り出したelが異なるとき
+            if(dt !== el){ 
+               // 取り出したdt要素(ここではel)がクリックされたdt要素と違う場合、
+               // elの親要素のクラスからappearを取り除く
+                el.parentNode.classList.remove('show');
+            }
+        });
+    });
+
+});
 
 
 }

@@ -1,4 +1,4 @@
-/* common */
+/* ----------------common---------------- */
 body{
     margin: 0;
     font-family: var(--Gothic-font);
@@ -27,6 +27,7 @@ h3{
     letter-spacing: 4px;
     font-family: var(--Mincho-font);
     text-align: center;
+    text-transform: uppercase;
   }
 
   .tytle p{
@@ -94,7 +95,7 @@ a{
 /* 3つずつ配列 */
 
 .three-array ul{
-  width: 90%;
+  width: 100%;
   margin: 32px auto 0;
   display: flex;
   flex-wrap: wrap;
@@ -141,7 +142,7 @@ a{
 }
 
 
-/* ハンバーガーメニュー */
+/* ----------------ハンバーガーメニュー---------------- */
 
 .overlay{
   position: fixed;
@@ -150,7 +151,8 @@ a{
   bottom: 0;
   right: 0;
   left: 0;
-  background:rgba(255,255,255,0.95) ;
+  /* background:rgba(255,255,255,0.95) ; */
+  background: var(--original-light-gray);
   text-align: center;
   padding: 64px;
   opacity: 0; /*デフォルトでメニュー画面非表示*/
@@ -187,15 +189,25 @@ a{
 .overlay h2{
   letter-spacing: 4px;
   padding: 24px 0 32px;
+  color: var(--original-black);
 }
 
 .overlay li{
+  width: 90%;
   font-size: 18px;
   color: var(--original-black);
   letter-spacing: 1px;
-  padding-bottom: 20px;
-
+  padding: 16px 0;
+  background: var(--original-gray);
+  border: dashed 1px var(--accentcolor);
+  border-radius: 16px;
+  margin: 0 auto 32px;
+  vertical-align: center;
 } 
+
+.overlay li:hover{
+  background-color: #c3e0ca;
+}
 
 .overlay h2,
 .overlay li{
@@ -217,11 +229,11 @@ a{
 
 
 
-/* ヘッダー部分 */
+/* ----------------ヘッダー---------------- */
 
 header{
   box-sizing: border-box;
-    padding: 0 16px;
+    padding: 0 32px;
     width: 100%;
     position: fixed;
     top: 0;
@@ -245,7 +257,7 @@ header nav{
 header ul{
     display: flex;
     align-items: center;
-    gap: 24px;
+    gap: 32px;
 }
 
 
@@ -275,7 +287,7 @@ header nav li div p{
 
 
 
-/* 検索入力フォーム */
+/* ----------------検索入力フォーム---------------- */
 
 .search-input form{
   display: flex;
@@ -382,10 +394,10 @@ header nav li div p{
 
 
 
-/* グローバルメニュー */
+/* ----------------グローバルメニュー---------------- */
 
 .grobal-menu{
-  padding: 128px 0 32px;
+  padding: 96px 0 32px;
 }
 
 /* メニュー項目 */
@@ -471,6 +483,7 @@ header nav li div p{
   color: var(--original-black);
 }
 
+/* 子ウインドウがテキストのみ */
 .child-menu .text-category a{
   color: var(--original-black);
   background: var(--original-gray);
@@ -498,7 +511,7 @@ header nav li div p{
 
 
 
-/* メインビジュアル */
+/* ----------------メインビジュアル---------------- */
 .mainvisual img{
   width: 100%;
   height: auto;
@@ -507,7 +520,7 @@ header nav li div p{
 
 
 
-/* カテゴリー セクション */
+/* ----------------カテゴリー---------------- */
 
 .category{
   margin-top:64px;
@@ -602,10 +615,10 @@ header nav li div p{
 
 
 
-/* ランキング セクション */
+/* ----------------ランキング---------------- */
 
 .ranking{
-  padding-top: 128px;
+  padding-top: 96px;
 }
 
 /* 順位の数字部分の親要素 */
@@ -648,10 +661,12 @@ header nav li div p{
 
 
 
-/* 新商品 セクション */
+/* ----------------new items---------------- */
 
 .new-items{
-    padding-top: 128px;
+  padding-top: 32px;
+    margin-top:96px;
+    background: var(--original-light-gray);
 }
 
 .slide-items {
@@ -698,10 +713,32 @@ header nav li div p{
 
 
 
-/* aboutus セクション */
+/* ----------------features---------------- */
+
+.features{
+  padding-top: 96px;
+}
+
+.features img{
+  border: solid 1px var(--original-gray);
+}
+
+.features li div{
+  display: flex;
+  flex-direction: column; /* 画像と文字を縦並び */
+  align-items: center;
+}
+
+.features p{
+  font-size: 14px;
+  color: var(--original-black);
+}
+
+
+/* ----------------aboutus---------------- */
 
 .aboutus{
-  padding-top: 128px;
+  padding-top: 96px;
 }
 
 .aboutus ul{
@@ -742,21 +779,22 @@ header nav li div p{
 }
 
 /* キーメッセージ */
-.aboutus section:nth-of-type(2) .key-message{
+.aboutus .key-message{
   font-size: 16px;
   padding: 24px 0;
 }
 /* 文章の部分 */
-.aboutus section:nth-of-type(2) p{
+.aboutus .message p{
   padding-bottom: 16px;
 }
 
 
 
-/* contact セクション */
+
+/* ----------------contact---------------- */
 
 .contact{
-  margin-top: 128px;
+  margin-top: 96px;
 }
 
 .contact .container{
@@ -767,7 +805,7 @@ header nav li div p{
 }
 
 .contact ul{
-  width: 90%;
+  width: 100%;
   display: flex;
   justify-content: center;
   margin-top: 32px;
@@ -850,47 +888,96 @@ header nav li div p{
 
 
 
-/* information セクション */
 
-.news{
-    padding: 128px 0;
+/* ----------------information----------------*/
+
+.information{
+    padding: 96px 0;
 }
 
-.news ul{
-  width: 90%;
-  margin: 0 auto;
+.information dl{
+  width: 100%;
+  box-sizing: border-box;
+  background:var(--original-light-gray);
+  border-radius: 16px;
+  padding: 32px;
+  margin: 16px auto 32px;
 }
 
-.news li{
-    border-bottom: 1px solid var(--original-gray);
-    padding: 16px 0;
+.information dl > div{
+  color: var(--original-black);
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  position: relative;
+  border-bottom: 1px dashed var(--original-gray);
 }
 
-.news ul p{
-    color: var(--original-black);
-    line-height: 1.5;
+.information dt{
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  cursor: pointer;
+  user-select: none; /*ダブルクリックしてもテキスト選択されない*/
 }
 
-.news ul a{
-    transition: opacity .3s;
+.information dt p:first-child{
+  margin-right: 16px;
+  color: var(--accentcolor);
 }
 
-.news ul a:hover{
-    opacity: .7;
+.information dt i{
+  font-size: 20px;
+  margin-left: auto;
+}
+
+.information dd{
+  margin: 0 0 0 16px;
+  padding: 8px;
+  display: none; /* 回答はデフォルトで非表示 */
+}
+
+.information #information-close{
+  display: none; /* 閉じるボタンはデフォルトで非表示 */
+}
+
+.information dl > div.show dd{
+  display: block; /* divにshowクラスをつけたら詳細表示 */
+  animation: .3s fadeIn;
+}
+
+.information div.show #information-close{
+  display: block; /* divにshowクラスをつけたら閉じるボタン表示 */
+}
+
+.information div.show #information-open{
+  display: none; /* divにshowクラスをつけたら開くボタン表示 */
+}
+
+/* 詳細を表示したときにつけるアニメーション */
+@keyframes fadeIn{
+  0% {
+     opacity:0;
+     transform: translateY(-10px); /* 少し上に配置しておく */
   }
-
-  .news .btn{
-    width: 40%;
-    margin: 32px auto 0;
+  100%{
+      opacity: 1;
+      transform: none; /* 元の位置に戻す */
   }
+}
+
+.information .btn{
+  width: 40%;
+  margin: 32px auto 0;
+}
 
 
 
 
-  /* footer */
+  /* ----------------footer---------------- */
 
 footer{
     background: var(--original-light-gray);
+    /* background: var(--accentcolor); */
     padding-top: 32px;
     position: relative;
   }
@@ -1059,7 +1146,7 @@ footer{
 
 
 
-  /* animation */
+  /* ----------------animation---------------- */
 
 .animate{
     opacity: 0;
@@ -1082,4 +1169,12 @@ footer{
 
 
 
-  
+  /* 800px > */
+@media(min-width:800px) {
+    .container{
+        width: calc(100% - 64px);
+        margin: 0 auto;
+        max-width: 1100px;
+    }
+ 
+}
