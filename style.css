@@ -22,6 +22,8 @@ h3{
     /* font-family: var(--Mincho-font); */
 }
 
+/* セクションタイトル */
+
 .tytle h2{
     font-size: 24px;
     letter-spacing: 4px;
@@ -151,7 +153,6 @@ a{
   bottom: 0;
   right: 0;
   left: 0;
-  /* background:rgba(255,255,255,0.95) ; */
   background: var(--original-light-gray);
   text-align: center;
   padding: 64px;
@@ -192,22 +193,47 @@ a{
   color: var(--original-black);
 }
 
+.overlay ul{
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
 .overlay li{
-  width: 90%;
+  box-sizing: border-box;
+  width: calc((100% - 32px) / 2);
+} 
+
+.overlay li a{
   font-size: 18px;
   color: var(--original-black);
   letter-spacing: 1px;
-  padding: 16px 0;
   background: var(--original-gray);
-  border: dashed 1px var(--accentcolor);
+  /* background: #dfd8d9; */
+  border: dashed 1px var(--original-light-gray);
   border-radius: 16px;
-  margin: 0 auto 32px;
-  vertical-align: center;
-} 
+  padding: 16px;
 
-.overlay li:hover{
+  display: flex; 
+  align-items: center;
+}
+
+.overlay li a:hover{
   background-color: #c3e0ca;
 }
+
+.overlay-parent-menu span{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-left: auto;
+  text-align: center;
+  line-height: 40px;
+  background-color: var(--original-light-gray);
+}
+
 
 .overlay h2,
 .overlay li{
@@ -738,7 +764,8 @@ header nav li div p{
 /* ----------------aboutus---------------- */
 
 .aboutus{
-  padding-top: 96px;
+  margin-top: 96px;
+  background: var(--original-light-gray);
 }
 
 .aboutus ul{
@@ -920,14 +947,15 @@ header nav li div p{
   user-select: none; /*ダブルクリックしてもテキスト選択されない*/
 }
 
+/* 日付 */
 .information dt p:first-child{
   margin-right: 16px;
-  color: var(--accentcolor);
+  color: var(--accentcolor); /* 日付の文字色 */
 }
 
 .information dt i{
   font-size: 20px;
-  margin-left: auto;
+  margin-left: auto; /* 矢印アイコンを右側へ */
 }
 
 .information dd{
@@ -1014,27 +1042,22 @@ footer{
 
   footer .adress{
     padding-bottom: 8px;
+    color: var(--original-black);
+    text-align: center;
   }
 
   footer .adress h3{
     font-family: var(--Mincho-font);
-  }
-  
-  footer .adress h3,
-  footer .adress p{
-    color: var(--original-black);
-    padding-bottom: 4px;
-    text-align: center;
-  }
-  
-  footer .adress h3{
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
+    padding-bottom: 16px;
   }
   
   footer .adress p{
     font-size: 14px;
+    padding-bottom: 4px;
   }
+  
   
  
 
