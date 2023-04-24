@@ -80,7 +80,29 @@
     //----------------スライダー----------------
     $(".slide-items").slick({
         autoplay:true,
-        slidesToShow:3,
+        slidesToShow:4,
+        autoplaySpeed: 3000, // 自動再生のスライド切り替えまでの時間を設定
+        speed: 1000, // スライドが流れる速度を設定
+        cssEase: 'linear',//動きの種類等速
+        infinite:true,
+        slidesToScroll:1,
+        dots:true,
+        responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 2, // 画面幅750px以下でスライド3枚表示
+              }
+            }
+          ]
+      });
+
+      $(".mainvisual").slick({
+        autoplay:true,
+        slidesToShow:1,
+        autoplaySpeed: 3000, // 自動再生のスライド切り替えまでの時間を設定
+        speed: 1000, // スライドが流れる速度を設定
+        cssEase: 'linear',//動きの種類等速
         infinite:true,
         slidesToScroll:1,
         dots:true,

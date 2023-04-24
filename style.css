@@ -19,7 +19,6 @@ h2,
 h3{
     margin: 0;
     font-weight: normal;
-    /* font-family: var(--Mincho-font); */
 }
 
 /* セクションタイトル */
@@ -32,13 +31,13 @@ h3{
     text-transform: uppercase;
   }
 
-  .tytle p{
-    font-size: 16px;
-    letter-spacing: 4px;
-    margin-top: 4px;
-    font-family: var(--Mincho-font);
-    text-align: center;
-  }
+.tytle p{
+  font-size: 16px;
+  letter-spacing: 4px;
+  margin-top: 4px;
+  font-family: var(--Mincho-font);
+  text-align: center;
+}
 
 .tytle h2::first-letter{
     font-size: 28px;
@@ -141,6 +140,17 @@ a{
   font-size: 12px;
   margin-left: 4px;
   content: '税込';
+}
+
+/* 背景グレーのブロック */
+.light-gray-block{
+  padding: 32px 0;
+  margin-top:96px;
+  background: var(--original-light-gray);
+}
+
+.white-block{
+  margin-top: 96px;
 }
 
 
@@ -313,111 +323,6 @@ header nav li div p{
 
 
 
-/* ----------------検索入力フォーム---------------- */
-
-.search-input form{
-  display: flex;
-  display: none; /* 検索フォームはデフォルトで非表示 */
-  margin-right: 4px;
-  width: 100%;
-}
-
-.search-input form input,
-.search-input form button{
-  all: unset;
-  padding: 8px;
-}
-
-.search-input form input{
-  border: 1px solid #ababab;
-}
-
-.search-input form button{
-  width: 24px;
-  color: white;
-  text-align: center;
-  background: black;
-  border: 1px solid black;
-  cursor: pointer;
-  transition: color .3s;
-}
-
-.search-input #search:checked ~ form{
-  display: block; /* ボタンが押されたとき検索フォームを表示 */
-}
-
-.search-input form button:hover{
-  color: #888;
-}
-
-/* 検索フォーム開くボタン */
-
-.search-input label.open{
-  display: flex; 
-  flex-direction: column;
-  align-items: center; 
-
-  transition: color .3s;
-  cursor: pointer;
-}
-
-.search-input label.open:hover{
-  color: darkgray;
-}
-
-.search-input label.open i{
-  font-size: 20px;
-}
-.search-input label.open p{
-  font-size: 12px;
-}
-
-.search-input #search:checked ~ label.open{
-  display: none; /* ボタンが押されたとき開くボタンを非表示 */
-}
-
-/* 検索フォーム閉じるボタン */
-
-.search-input label.close{
-  width: 64px; 
-  height: 20px;
-  position: relative;
-  cursor: pointer;
-  display: none;
-
-}
-
-.search-input label.close span{
-  width: 28px;
-  height: 2px; /* 線の太さ */
-  background: #000;
-
-  position: absolute;
-  transition: background .3s;
-}
-
-.search-input label.close:hover span{
-  background: darkgray;
-}
-
-.search-input label.close span:nth-child(1){
-  top: 50%;
-  transform: rotate(45deg);
-}
-.search-input label.close span:nth-child(2){
-  top: 50%;
-  transform: rotate(-45deg);
-}
-
-.search-input label.close p{
-  font-size: 12px;
-  transform: translateY(calc(100% + 8px));
-}
-
-.search-input #search:checked ~ label.close{
-  display: block; /* ボタンが押されたとき閉じるボタンを表示 */
-}
-
 
 
 /* ----------------グローバルメニュー---------------- */
@@ -480,6 +385,7 @@ header nav li div p{
   position: absolute;
   top: 40px; /* メニューウインドウの高さ位置。メニュー項目の高さ分 */
   left: 0;
+  z-index: 1;
   
   /* display blockに切り替わったときふわっと表示 */
   animation: appear 1s ease; 
@@ -538,26 +444,41 @@ header nav li div p{
 
 
 /* ----------------メインビジュアル---------------- */
-.mainvisual img{
+/* .mainvisual img{
   width: 100%;
   height: auto;
   object-fit: cover;
+} */
+
+.mainvisual {
+  width: 100%;
+  display: flex;
+  max-width: 88%;
+  margin:32px auto 0;
+  padding: 0;
 }
 
+.mainvisual li {
+  height: auto;
+  margin-right: 8px;
+  margin-left: 8px;
+}
 
+.mainvisual img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: opacity .3s, transform .3s;
+}
+
+.mainvisual img:hover{
+  opacity: 0.7;
+  transform: scale(1.03);
+}
 
 /* ----------------カテゴリー---------------- */
 
-.category{
-  margin-top:64px;
-}
-
-.category-back{
-  background: var(--original-light-gray);
-  padding: 32px 0;
-  margin-top: 32px;
-
-}
 
 .category-box ul{
   width: 80%;
@@ -689,12 +610,6 @@ header nav li div p{
 
 /* ----------------new items---------------- */
 
-.new-items{
-  padding-top: 32px;
-    margin-top:96px;
-    background: var(--original-light-gray);
-}
-
 .slide-items {
     width: 100%;
     display: flex;
@@ -763,11 +678,6 @@ header nav li div p{
 
 /* ----------------aboutus---------------- */
 
-.aboutus{
-  margin-top: 96px;
-  background: var(--original-light-gray);
-}
-
 .aboutus ul{
   display: flex;
   justify-content: center;
@@ -808,7 +718,8 @@ header nav li div p{
 /* キーメッセージ */
 .aboutus .key-message{
   font-size: 16px;
-  padding: 24px 0;
+  margin: 24px 0;
+  border-bottom: 1px solid var(--original-black);
 }
 /* 文章の部分 */
 .aboutus .message p{
