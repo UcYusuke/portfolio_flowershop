@@ -78,7 +78,21 @@
 
 
     //----------------スライダー----------------
-    $(".slide-items").slick({
+    
+    //メインビジュアル用
+    $(".slide-type1").slick({
+        autoplay:true,
+        slidesToShow:1,
+        autoplaySpeed: 5000, // 自動再生のスライド切り替えまでの時間を設定
+        speed: 1000, // スライドが流れる速度を設定
+        cssEase: 'linear',//動きの種類等速
+        infinite:true,
+        slidesToScroll:1,
+        dots:true,
+        });
+
+    //新商品用
+    $(".slide-type2").slick({
         autoplay:true,
         slidesToShow:4,
         autoplaySpeed: 3000, // 自動再生のスライド切り替えまでの時間を設定
@@ -97,16 +111,7 @@
           ]
       });
 
-      $(".mainvisual").slick({
-        autoplay:true,
-        slidesToShow:1,
-        autoplaySpeed: 3000, // 自動再生のスライド切り替えまでの時間を設定
-        speed: 1000, // スライドが流れる速度を設定
-        cssEase: 'linear',//動きの種類等速
-        infinite:true,
-        slidesToScroll:1,
-        dots:true,
-      });
+
 
 
 
@@ -128,7 +133,7 @@
 
     //交差したかどうかを監視するオブザーバー
     const InviewObserver = new IntersectionObserver(InviewCallback,{
-        threshold:0.4,
+        threshold:0.1,
     });
 
     //animateクラスをつけた要素に、監視を開始
