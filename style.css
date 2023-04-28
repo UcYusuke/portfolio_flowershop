@@ -65,8 +65,17 @@ a{
 }
 
 .container{
-    margin: 0 32px;
+    margin: 0 16px;
 }
+/* 800px > */
+@media(min-width:768px) {
+  .container{
+      width: calc(100% - 64px);
+      margin: 0 auto;
+      max-width: 1100px;
+  }
+}    
+
 
 /* ボタン */
 .btn{
@@ -92,6 +101,7 @@ a{
 
 }
 
+/* 3つずつ配列 */
 .three-array ul{
   width: 100%;
   margin: 32px auto 0;
@@ -100,53 +110,48 @@ a{
   gap: 32px;
   }
   
-  .three-array li{
-    width: calc((100% - 32px) / 2);
-  }
-  
-  .three-array li img{
-    width: 100%;
-    border-radius: 8px;
-    margin-bottom: 8px;
-    transition: transform .3s, opacity .3s;
-  }
-  
-  .three-array li img:hover{
-    transform: scale(1.05);
-    opacity: 0.7;
-  }
+.three-array li{
+  width: calc((100% - 32px) / 2);
+}
 
+.three-array li img{
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  transition: transform .3s, opacity .3s;
+}
 
+.three-array li img:hover{
+  transform: scale(1.05);
+  opacity: 0.7;
+}
+
+/* 800px > */
 @media(min-width:768px) {
-
   .three-array ul{
     width: 100%;
     margin: 32px auto 0;
     display: flex;
     flex-wrap: wrap;
     gap: 32px;
-    }
+  }
     
-    .three-array li{
-      width: calc((100% - 64px) / 3);
-    }
-    
-    .three-array li img{
-      width: 100%;
-      border-radius: 8px;
-      margin-bottom: 8px;
-      transition: transform .3s, opacity .3s;
-    }
-    
-    .three-array li img:hover{
-      transform: scale(1.05);
-      opacity: 0.7;
-    }
+  .three-array li{
+    width: calc((100% - 64px) / 3);
+  }
 
+  .three-array li img{
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    transition: transform .3s, opacity .3s;
+  }
+
+  .three-array li img:hover{
+    transform: scale(1.05);
+    opacity: 0.7;
+  }
 }
-
-
-/* 3つずつ配列 */
 
 
 
@@ -184,10 +189,17 @@ a{
 .slide-items {
   width: 100%;
   display: flex;
-  max-width: 88%;
+  max-width: 100%;
   margin:32px auto 0;
   padding: 0;
 }
+/* 800px > */
+@media(min-width:768px) {
+  .slide-items{
+    max-width: 88%;
+  }
+}
+
 
 .slide-items li {
   height: auto;
@@ -389,9 +401,16 @@ header nav li div i{
 
 header nav li a p,
 header nav li div p{
-    font-size: 12px;
+    display: none; /* スマホではボタン下の文字非表示 */
 }
-
+/* 800px > */
+@media(min-width:768px) {
+  header nav li a p,
+  header nav li div p{
+      font-size: 12px;
+      display: block; /* PCではボタン下の文字表示 */
+  }
+}   
 
 
 
@@ -399,8 +418,16 @@ header nav li div p{
 /* ----------------グローバルメニュー---------------- */
 
 .grobal-menu{
-  padding: 96px 0 32px;
+  display: none;
 }
+
+/* 800px > */
+@media(min-width:768px) {
+  .grobal-menu{
+      display: block;
+      padding-top: 96px;
+  }
+}   
 
 /* メニュー項目 */
 
@@ -511,6 +538,19 @@ header nav li div p{
   }
 }
 
+/* ----------------メインビジュアル---------------- */
+
+.mainvisual{
+  padding-top: 96px;
+}
+
+/* 800px > */
+@media(min-width:768px) {
+  .mainvisual{
+      padding-top:32px;
+  }
+}   
+
 
 /* ----------------カテゴリー---------------- */
 
@@ -526,20 +566,39 @@ header nav li div p{
   margin: 0 auto;
 }
 
-.category-box li p{
-  font-size: 14px;
-  color:var(--original-black);
-  line-height: 2;
-  padding: 0 4px;
-  }
-
   /* カテゴリ名 */
 .category-box li p:nth-of-type(1){
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 14px;
   text-align: center;
-  padding: 16px 0 8px;
+  padding-top: 4px;
 }
+/* 800px > */
+@media(min-width:768px) {
+  .category-box li p:nth-of-type(1){
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    padding: 16px 0 8px;
+  }
+}   
+
+
+
+/* 説明文 */
+.category-box li p:nth-of-type(n+2){
+    display: none;  /* スマホでは説明文非表示 */
+  }
+/* 800px > */
+@media(min-width:768px) {
+  .category-box li p:nth-of-type(n+2){
+    display: block;
+    font-size: 14px;  /* PCでは説明文非表示 */
+    color:var(--original-black);
+    line-height: 2;
+    padding: 0 4px;
+    }
+}   
+
 
 /* タブメニュー用 */
 .tab-menu{
@@ -591,9 +650,9 @@ header nav li div p{
 
 /* activeクラスをつけたコンテンツを表示 */
 .content.active{
-  /* background: var(--original-light-gray); */
   display: block;
 }
+
 /* activeクラスがついていないコンテンツは非表示 */
 .content{
   display: none;
@@ -679,11 +738,15 @@ header nav li div p{
   align-items: center;
 }
 
-.features p{
-  font-size: 14px;
+.features li p{
+  font-size: 12px;
   color: var(--original-black);
 }
-
+@media(min-width:768px) {
+  .features li p{
+    font-size: 14px;
+  }
+}   
 
 /* ----------------aboutus---------------- */
 
@@ -693,15 +756,27 @@ header nav li div p{
   background: var(--original-light-gray);
 }
 
-.aboutus ul{
-  display: flex;
-  justify-content: center;
-  margin-top: 32px;
+.aboutus .container{
+  margin-top: 16px;
 }
 
+@media(min-width:768px) {
+  .aboutus ul{
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+  }
+}   
+
 .aboutus ul li{
-  width: calc((100%) / 2);
+  width: 100%;
 }
+@media(min-width:768px) {
+  .aboutus ul li{
+    width: calc((100%) / 2);
+  }
+}   
+
 
 .aboutus ul li img{
   width: 100%;
@@ -711,9 +786,13 @@ header nav li div p{
 
 .aboutus ul div{
   box-sizing: border-box;
-  background: #f9f9f9;
-  padding: 32px;
+  padding: 16px;
 }
+@media(min-width:768px) {
+  .aboutus ul div{
+    padding: 32px;
+  }
+}   
 
 /* 店名 */
 .aboutus ul div h3{
@@ -721,7 +800,7 @@ header nav li div p{
   color: var(--original-black);
   font-family: var(--Mincho-font);
   font-weight: bold;
-  padding-bottom: 8px;
+  text-align: center;
 }
 
 .aboutus ul div p{
@@ -733,11 +812,12 @@ header nav li div p{
 /* キーメッセージ */
 .aboutus .key-message{
   font-size: 16px;
-  margin: 24px 0;
+  margin: 16px 0;
   border-bottom: 1px solid var(--original-black);
+  padding-bottom: 8px;
 }
 /* 文章の部分 */
-.aboutus .message p{
+.aboutus .message p:nth-of-type(n+2){
   padding-bottom: 16px;
 }
 
@@ -753,29 +833,50 @@ header nav li div p{
 .contact .container{
   display: flex;
   justify-content: center;
-  height: 240px;
   color: var(--original-black);
 }
+@media(min-width:768px) {
+  .contact .container{
+    height: 240px;
+  }
+}   
 
 .contact ul{
   width: 100%;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   margin-top: 32px;
 }
+@media(min-width:768px) {
+  .contact ul{
+    flex-wrap: nowrap;
+    margin-top: 32px;
+  }
+}   
 
 .contact ul li{
-  width: calc((100%) / 3);
+  width: 80%;
   text-align: center;
-  border-left: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 32px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+@media(min-width:768px) {
+  .contact ul li{
+    width: calc((100%) / 3);
+    border-left: 1px solid #ccc;
+    border-bottom: none;
+    padding: 16px;
+  }
+  .contact ul li:last-child{
+    border-right: 1px solid var(--original-gray);
+  }
+}   
 
-.contact ul li:last-child{
-  border-right: 1px solid var(--original-gray);
-}
+
 
 /* アイコン部分 */
 .contact ul li a:first-child{
@@ -791,21 +892,36 @@ header nav li div p{
 }
 
 .contact .btn{
-  width: 70%;
+  width: 50%;
   margin-top: 16px;
 }
+@media(min-width:768px) {
+  .contact .btn{
+    width: 80%;
+  }
+}   
 
-.contact .PhoneNumber{
+/* 電話番号部分 */
+.contact .phone-number{
   color: var(--accentcolor);
   font-size: 24px;
   letter-spacing: 1px;
   font-weight: bold;
   padding: 8px 0;
 }
-
-.contact .BusinessHour{
+/* 営業時間部分 */
+.contact .business-hour{
   font-size: 14px;
 }
+
+.contact .tytle span{
+  display: none;
+}
+@media(min-width:768px) {
+  .contact .tytle span{
+    display: inline;
+  }
+}   
 
 
 
@@ -866,18 +982,33 @@ header nav li div p{
 }
 
 .information dt{
-  display: flex;
   align-items: center;
   padding: 8px;
   cursor: pointer;
   user-select: none; /*ダブルクリックしてもテキスト選択されない*/
 }
+@media(min-width:768px) {
+  .information dt{
+    display: flex; /* PCでは日づけも横並び*/
+  }
+}   
+
+.information dt div{
+  display: flex; /* 親メッセージとボタンを横並び */
+  flex: 1;
+}
 
 /* 日付 */
-.information dt p:first-child{
-  margin-right: 16px;
+.information dt > p{
+  margin-bottom: 4px;
   color: var(--accentcolor); /* 日付の文字色 */
 }
+@media(min-width:768px) {
+  .information dt > p{
+    margin-right: 16px;
+    margin-bottom: 0;
+  }
+}   
 
 .information dt i{
   font-size: 20px;
@@ -1118,12 +1249,3 @@ footer{
 
 
 
-  /* 800px > */
-@media(min-width:768px) {
-    .container{
-        width: calc(100% - 64px);
-        margin: 0 auto;
-        max-width: 1100px;
-    }
- 
-}

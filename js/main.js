@@ -89,6 +89,14 @@
         infinite:true,
         slidesToScroll:1,
         dots:true,
+        responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                arrows:false,
+              }
+            }
+          ]
         });
 
     //新商品用
