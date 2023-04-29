@@ -88,18 +88,28 @@ a{
   box-shadow: 0 2px 4px rgba(0,0,0,.2);
   transition: opacity .3s;
 }
+
+.btn:hover{
+  opacity: .7;
+}
+
 .btn p{
+  font-size: 14px;
   flex: 1;
   margin-left: 16px;
   text-align: center;
 }
+@media(min-width:768px) {
+  .btn p{
+    font-size: 16px;
+  }
+}
+
 .btn i{
   margin: 0 16px 0 auto;
 }
-.btn:hover{
-  opacity: .7;
 
-}
+
 
 /* 3つずつ配列 */
 .three-array ul{
@@ -831,23 +841,35 @@ header form{
   }
 }   
 
-.aboutus ul div p{
-  font-size: 14px;
+/* キーメッセージと文章の部分共通 */
+.aboutus .message{
   color: var(--original-black);
   line-height: 2;
 }
 
 /* キーメッセージ */
 .aboutus .key-message{
-  font-size: 16px;
+  font-size: 14px;
   margin: 16px 0;
   border-bottom: 1px solid var(--original-black);
   padding-bottom: 8px;
 }
+@media(min-width:768px) {
+  .aboutus .key-message{
+    font-size: 16px;
+  }
+}   
+
 /* 文章の部分 */
 .aboutus .message p:nth-of-type(n+2){
+  font-size: 12px;
   padding-bottom: 16px;
 }
+@media(min-width:768px) {
+  .aboutus .message p:nth-of-type(n+2){
+    font-size: 14px;
+  }
+}   
 
 
 
@@ -970,13 +992,21 @@ header form{
   margin: 16px auto 32px;
 }
 
+/* 共通設定 */
 .information dl > div{
+  font-size: 14px;
   color: var(--original-black);
   padding-bottom: 16px;
   margin-bottom: 16px;
   position: relative;
   border-bottom: 1px dashed var(--original-gray);
 }
+@media(min-width:768px) {
+  .information dl > div{
+    font-size: 16px;
+  }
+}   
+
 
 .information dt{
   align-items: center;
@@ -992,7 +1022,7 @@ header form{
 
 .information dt div{
   display: flex; /* 親メッセージとボタンを横並び */
-  flex: 1;
+  flex: 1; /* 右までいっぱいに広げる */
 }
 
 /* 日付 */
@@ -1012,19 +1042,42 @@ header form{
   margin-left: auto; /* 矢印アイコンを右側へ */
 }
 
+/* 詳細文 */
 .information dd{
   margin: 0 0 0 16px;
-  padding: 8px;
-  display: none; /* 回答はデフォルトで非表示 */
+  /* 閉じている状態 */
+  /* 閉じているときはline-heightとpaddingも0にしておく */
+  opacity: 0;
+  visibility: hidden;
+  line-height: 0;
+  padding: 0; 
+
+  /* 閉じるアニメーション */
+  transition:
+      line-height .3s ease-out,
+      opacity     .3s linear,
+      visibility  .3s linear;
+  animation: .3s fadeOut;
+}
+
+
+.information dl > div.show dd{
+    /* 開いている状態 */
+    line-height: 1.5;
+    opacity: 1;
+    visibility: visible;
+    padding: 8px 0;
+
+      /* 開くアニメーション */
+    transition:
+        line-height .3s ease-out,
+        opacity     .3s linear,
+        visibility  .3s linear;
+    animation: .3s fadeIn;
 }
 
 .information #information-close{
   display: none; /* 閉じるボタンはデフォルトで非表示 */
-}
-
-.information dl > div.show dd{
-  display: block; /* divにshowクラスをつけたら詳細表示 */
-  animation: .3s fadeIn;
 }
 
 .information div.show #information-close{
@@ -1044,6 +1097,16 @@ header form{
   100%{
       opacity: 1;
       transform: none; /* 元の位置に戻す */
+  }
+}
+@keyframes fadeOut{
+  0%{
+      opacity: 1;
+      transform: none; /* 元の位置に戻す */
+  }
+  100% {
+     opacity:0;
+     transform: translateY(-10px); /* 少し上に配置しておく */
   }
 }
 
