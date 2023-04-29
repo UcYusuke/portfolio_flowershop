@@ -994,19 +994,12 @@ header form{
 
 /* 共通設定 */
 .information dl > div{
-  font-size: 14px;
   color: var(--original-black);
   padding-bottom: 16px;
   margin-bottom: 16px;
   position: relative;
   border-bottom: 1px dashed var(--original-gray);
 }
-@media(min-width:768px) {
-  .information dl > div{
-    font-size: 16px;
-  }
-}   
-
 
 .information dt{
   align-items: center;
@@ -1025,13 +1018,25 @@ header form{
   flex: 1; /* 右までいっぱいに広げる */
 }
 
+/* 親メニュー */
+.information dt div p{
+  font-size: 14px;
+}
+@media(min-width:768px) {
+  .information dt div p{
+    font-size: 16px;
+  }
+}  
+
 /* 日付 */
 .information dt > p{
+  font-size: 14px;
   margin-bottom: 4px;
   color: var(--accentcolor); /* 日付の文字色 */
 }
 @media(min-width:768px) {
   .information dt > p{
+    font-size: 16px;
     margin-right: 16px;
     margin-bottom: 0;
   }
@@ -1044,7 +1049,9 @@ header form{
 
 /* 詳細文 */
 .information dd{
-  margin: 0 0 0 16px;
+  font-size: 14px;
+  margin-left: 16px;
+
   /* 閉じている状態 */
   /* 閉じているときはline-heightとpaddingも0にしておく */
   opacity: 0;
@@ -1289,8 +1296,15 @@ footer{
   }
 
   footer .copyright li{
+    font-size: 12px;
     padding: 0 16px;
   }
+  @media(min-width:768px) {
+    footer .copyright li{
+      font-size: 14px;
+    }
+  }   
+
   
   footer .copyright ul li:first-child{
     border-right: 1px solid white;
