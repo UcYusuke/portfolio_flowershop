@@ -193,7 +193,6 @@ a{
   margin:32px auto 0;
   padding: 0;
 }
-/* 800px > */
 @media(min-width:768px) {
   .slide-items{
     max-width: 88%;
@@ -246,9 +245,9 @@ a{
   bottom: 0;
   right: 0;
   left: 0;
-  background: var(--original-light-gray);
+  background: white; /* メニュー画面の背景 */
   text-align: center;
-  padding: 64px;
+  padding-top: 64px;
   opacity: 0; /*デフォルトでメニュー画面非表示*/
   transition: opacity .6s;
   pointer-events: none; 
@@ -280,43 +279,47 @@ a{
   font-size: 14px;
 }
 
-.overlay h2{
-  letter-spacing: 4px;
-  padding: 24px 0 32px;
-  color: var(--original-black);
-}
-
 .overlay ul{
-  width: 80%;
-  margin: 0 auto;
+  width: calc(100% - 32px);
+  margin: 16px auto;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 32px;
+  gap: 16px;
 }
 
 .overlay li{
-  box-sizing: border-box;
-  width: calc((100% - 32px) / 2);
+  width: 100%; /* スマホでは１列*/
+  height: 64px; /* 親メニューの高さ */
 } 
+@media(min-width:768px) {
+  .overlay li{
+    width: calc((100% - 32px) / 2); /* PCでは２列*/
+  } 
+}
 
+/* 親メニュー */
 .overlay li a{
-  font-size: 18px;
+  box-sizing: border-box;
+  height: 100%;
+  font-size: 16px;
   color: var(--original-black);
   letter-spacing: 1px;
-  background: var(--original-gray);
-  /* background: #dfd8d9; */
-  border: dashed 1px var(--original-light-gray);
-  border-radius: 16px;
-  padding: 16px;
+  background: var(--original-light-gray);
+  border: dashed 1px var(--original-gray);
+  border-radius: 8px;
+  padding: 8px;
 
   display: flex; 
   align-items: center;
+  transition: background .3s;
 }
 
 .overlay li a:hover{
-  background-color: #c3e0ca;
+  background: #eee;
 }
 
+/* 円の部分 */
 .overlay-parent-menu span{
   width: 40px;
   height: 40px;
@@ -324,7 +327,7 @@ a{
   margin-left: auto;
   text-align: center;
   line-height: 40px;
-  background-color: var(--original-light-gray);
+  background-color: white;
 }
 
 
@@ -360,7 +363,7 @@ header{
 }
 
 header.scrolled{
-  background: rgba(255,255,255,.95);
+  background: rgba(255,255,255,.97);
   box-shadow: 0 0 4px rgba(0,0,0,.3);
 }
 
@@ -379,8 +382,6 @@ header ul{
     gap: 32px;
 }
 
-
-header nav li a,
 header nav li div{
     display: flex;
     flex-direction: column;
@@ -389,28 +390,64 @@ header nav li div{
     cursor: pointer;
 }
 
-header nav li a:hover,
+
 header nav li div:hover{
     color: darkgray;
 }
 
-header nav li a i,
-header nav li div i{
-    font-size: 24px;
+header nav div i{
+    font-size: 32px; /* ハンバーガーメニューアイコンの大きさ */
 }
+@media(min-width:768px) {
+  header nav div i{
+      font-size: 24px;
+  }
+}   
 
-header nav li a p,
-header nav li div p{
+header nav div p{
     display: none; /* スマホではボタン下の文字非表示 */
 }
+
 /* 800px > */
 @media(min-width:768px) {
-  header nav li a p,
-  header nav li div p{
+  header nav div p{
       font-size: 12px;
       display: block; /* PCではボタン下の文字表示 */
   }
 }   
+
+/* 検索フォーム */
+header form{
+  display: none; /* スマホでは検索フォーム非表示 */
+}
+@media(min-width:768px) {
+  header form{
+    display: block; /* PCでは検索フォーム表示 */
+  }
+  header input,
+  header button{
+    all:unset;
+  }
+  header input{
+    border-bottom: 1px solid var(--original-black);
+    padding: 4px;
+    width: 200px;
+  }
+  header input::placeholder {
+    font-size: 14px;
+    color:var(--original-gray);
+  }
+  header button{
+    cursor: pointer;
+    transition: opacity .3s;
+  }
+  header button:hover{
+      opacity: .7;
+  }
+}  
+
+
+
 
 
 
@@ -794,15 +831,6 @@ header nav li div p{
   }
 }   
 
-/* 店名 */
-.aboutus ul div h3{
-  font-size: 20px;
-  color: var(--original-black);
-  font-family: var(--Mincho-font);
-  font-weight: bold;
-  text-align: center;
-}
-
 .aboutus ul div p{
   font-size: 14px;
   color: var(--original-black);
@@ -925,37 +953,6 @@ header nav li div p{
 
 
 
-/* sns */
-
-.contact .sns{
-  padding-top: 16px;
-}
-
-.contact .sns h3{
-  font-family: var(--Mincho-font);
-  font-size: 20px;
-  text-align: center;
-  letter-spacing: 2px;
-}
-
-.contact .sns div{
-  display: flex;
-  justify-content: center;
-  gap: 32px;
-  font-size: 24px;
-  padding: 8px 0;
-}
-
-.contact .sns a{
-  transition: opacity .3s;
-}
-
-.contact .sns a:hover{
-  opacity : .5;
-}
-
-
-
 
 
 /* ----------------information----------------*/
@@ -1062,7 +1059,6 @@ header nav li div p{
 
 footer{
     background: var(--original-light-gray);
-    /* background: var(--accentcolor); */
     padding-top: 32px;
     position: relative;
   }
@@ -1120,10 +1116,6 @@ footer{
 
   /* footer guides */
 
-  footer .guides div{
-    margin-bottom: 16px;
-  }
-
   footer .guides h3{
     text-align: center;
     font-size: 16px;
@@ -1133,19 +1125,16 @@ footer{
   }
   
   footer .guides ul{
-    width: 90%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 32px;
-    margin: 0 auto 32px;
+    margin: 0 auto;
+    gap: 16px;
+    justify-content: center;
   }
   
   footer .guides li{
-    width: calc((100% - 64px) / 3);
     text-align: center;
     display: flex;
     flex-direction: column;
-  }
+  } 
   
 
   footer .guides i{
@@ -1180,6 +1169,35 @@ footer{
   }
   
 
+  /* sns */
+
+.sns{
+  padding: 48px 0 32px;
+}
+
+.sns h3{
+  font-size: 16px;
+  text-align: center;
+  color: var(--original-black);
+  letter-spacing: 1px;
+}
+
+.sns div{
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  font-size: 20px;
+  padding: 8px 0;
+}
+
+.sns a{
+  transition: opacity .3s;
+}
+
+.sns a:hover{
+  opacity : .5;
+}
+
 
   /* copyright */
   
@@ -1193,7 +1211,14 @@ footer{
   footer .copyright div{
     display: flex;
     align-items: center;
+    flex-direction: column; /* copyrightとその他項目を縦並び*/
   }
+  @media(min-width:768px) {
+    footer .copyright div{
+      flex-direction: row; /* copyrightとその他項目を横並び*/
+    }
+  }   
+
   
   footer .copyright ul{
     display: flex;
@@ -1218,10 +1243,14 @@ footer{
   
   footer .copyright small{
   text-align: center;
-  padding: 0 8px;
-  margin-left: auto;
+  padding: 8px;
   }
-
+  @media(min-width:768px) {
+    footer .copyright small{
+      margin-left: auto;
+      padding: 0 8px;
+   }
+  }   
 
 
 
