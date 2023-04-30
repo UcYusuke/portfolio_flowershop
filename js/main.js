@@ -20,6 +20,19 @@
 
 
 
+   //----------------アコーディオン----------------
+
+    const lists = document.querySelectorAll('.accordion-parent-menu');
+
+    lists.forEach(li=>{
+    //liがクリックされたとき
+    li.addEventListener('click',()=>{
+        li.parentNode.classList.toggle('show'); //クリックしたliにshowクラスをつける
+    });
+
+});
+
+
 
 
     //----------------グローバルメニュー----------------

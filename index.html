@@ -47,42 +47,105 @@
 
     <!------------------------ ハンバーガーメニュー ------------------------>
       <div class="overlay">
+
         <!-- 閉じるボタン -->
         <div id="close">
           <span class="material-icons">close</span>
           <p>閉じる</p>
         </div>
+
         <!-- メニュー -->
         <img src="img/logo-min.png" alt="ロゴ画像">
-        <ul>
-          <li class="overlay-parent-menu">
-            <a href="#">
-              <p>用途から探す</p>
-              <span><i class="fa-solid fa-chevron-down"></i></span>
-            </a>
-          </li>
-          <li class="overlay-parent-menu">
-            <a href="#">
-              <p>花の種類から探す</p>
-              <span><i class="fa-solid fa-chevron-down"></i></span>
-            </a>
-          </li>
-          <li class="overlay-parent-menu">
-            <a href="#">
-              <p>色合いから探す</p>
-              <span><i class="fa-solid fa-chevron-down"></i></span>
-            </a>
-          </li>
-          <li class="overlay-parent-menu">
-            <a href="#">
-              <p>価格から探す</p>
-              <span><i class="fa-solid fa-chevron-down"></i></span>
-            </a>
-          </li>
-          <li><a href="#">お客様の声</a></li>
-          <li><a href="#">よくあるご質問</a></li>
-        </ul>
-      </div>
+
+        <div class="accordion">
+          <ul>       
+              <li>
+                  <div  class="accordion-parent-menu">
+                      <p>スタイルから探す</p>
+                      <i class="fa-solid fa-chevron-down" id="accordion-open"></i>
+                      <i class="fa-solid fa-chevron-up" id="accordion-close"></i>
+                  </div>
+                  <div class="accordion-child-menu">
+                      <ul>
+                        <li><a href="#">アレンジメント</a></li>
+                        <li><a href="#">花束</a></li>
+                        <li><a href="#">観葉植物</a></li>
+                      </ul>
+                  </div>
+              </li>
+  
+              <li>
+                  <div class="accordion-parent-menu">
+                      <p>花の種類から探す</p>
+                      <i class="fa-solid fa-chevron-down" id="accordion-open"></i>
+                      <i class="fa-solid fa-chevron-up" id="accordion-close"></i>
+                  </div>
+                  <div class="accordion-child-menu">
+                      <ul>
+                          <li><a href="#">バラ</a></li>
+                          <li><a href="#">チューリップ</a></li>
+                          <li><a href="#">コチョウラン</a></li>
+                      </ul>
+                  </div>
+              </li>
+
+              <li>
+                  <div class="accordion-parent-menu">
+                      <p>色合いから探す</p>
+                      <i class="fa-solid fa-chevron-down" id="accordion-open"></i>
+                      <i class="fa-solid fa-chevron-up" id="accordion-close"></i>
+                  </div>
+                  <div class="accordion-child-menu">
+                      <ul>
+                          <li><a href="#">レッド・ピンク系</a></li>
+                          <li><a href="#">イエロー・オレンジ系</a></li>
+                          <li><a href="#">ブルー・パープル系</a></li>
+                          <li><a href="#">ホワイト系</a></li>
+                      </ul>
+                  </div>
+              </li>
+
+              <li>
+                  <div class="accordion-parent-menu">
+                      <p>予算から探す</p>
+                      <i class="fa-solid fa-chevron-down" id="accordion-open"></i>
+                      <i class="fa-solid fa-chevron-up" id="accordion-close"></i>
+                  </div>
+                  <div class="accordion-child-menu">
+                      <ul>
+                          <li><a href="#">1,000円〜2,000円未満</a></li>
+                          <li><a href="#">2,000円〜3,000円未満</a></li>
+                          <li><a href="#">3,000円〜</a></li>
+                          <li><a href="#">オーダーメイド</a></li>
+                      </ul>
+                  </div>
+              </li>
+
+              <li>
+                  <div class="accordion-parent-menu">
+                      <p>お客様の声</p>
+                  </div>
+              </li>
+
+              <li>
+                  <div class="accordion-parent-menu">
+                      <p>よくある質問</p>
+                  </div>
+              </li>
+            </ul>
+        </div>
+
+        <section class="sns">
+          <h3>公式SNS</h3>
+          <div>
+            <a href="#"><i class="bi bi-twitter"></i></a>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+          </div>
+        </section>
+
+    </div>
+
 
 
     <!------------------------ グローバルメニュー ------------------------>
