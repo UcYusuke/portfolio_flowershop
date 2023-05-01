@@ -292,9 +292,9 @@ button{
   right: 0;
   left: 0;
   width: 100%;
-  height: 90%;
+  height: 95%;
   background: white; /* メニュー画面の背景 */
-  padding-top: 64px; /* 全体的に閉じるボタンより下にくるように配置 */
+  padding-top: 48px; /* 全体的に閉じるボタンより下にくるように配置 */
   padding-bottom: 32px;
   opacity: 0; /*デフォルトでメニュー画面非表示*/
   transition: opacity .6s;
@@ -345,7 +345,7 @@ button{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 16px; /* 親メニュー間のギャップ */
+  gap: 8px; /* 親メニュー間のギャップ */
   
 }
 
@@ -542,6 +542,10 @@ li.show #accordion-open{
 }
 .overlay .bi-instagram{
   color: #293037;
+}
+
+.overlay .sns{
+  padding-top: 32px;
 }
 
 
