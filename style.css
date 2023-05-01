@@ -64,6 +64,11 @@ a{
   cursor: pointer;
 }
 
+input,
+button{
+  all:unset;
+}
+
 .container{
     margin: 0 16px;
 }
@@ -352,7 +357,7 @@ a{
     .accordion > ul > li{
       max-width: 800px; 
     }
-  }   
+}   
 
 /* 親メニュー */
 .accordion-parent-menu{
@@ -441,9 +446,25 @@ li.show .accordion-child-menu li:first-child{
     background: #eee; /* 子メニューマウスホバー時の効果*/
 }
 
+li.show .accordion-child-menu li{
+  position: relative; /* 子メニューの矢印を配置する親要素にrelative */
+}
+
+/* 子メニューの矢印 */
+li.show .accordion-child-menu a::before{
+  font-family: "Font Awesome 5 Free";
+  content: '\f054';
+  font-weight: 900;
+  font-size: 10px;
+  position: absolute;
+  top: 50%; /* 矢印の位置 */
+  left: 16px; /* 矢印の位置 */
+  transform: translateY(-7.5px); /* 自身の高さ半分移動して上下中央配置 */
+}
+
 li.show .accordion-child-menu a{
     border: dashed 1px var(--original-gray); /* 子メニューのボーダー */
-    padding: 8px 16px; /* 開いている状態 */
+    padding: 8px 32px; /* 開いている状態 */
     transition: padding .3s ease-out;  /* 開くアニメーション */
 }
 
@@ -472,6 +493,43 @@ li.show #accordion-open{
 .overlay.show li{
   opacity: 1; 
   transform: none; /* 元の位置に戻る */
+}
+
+/* ---ハンバーガーメニュー検索フォーム--- */
+
+.overlay form{
+  width: calc(100% - 32px); /* 全体の幅 */
+  height: 56px;
+  margin: 32px auto 0;
+  border: dashed 1px var(--original-gray); /* 検索フォームのボーダー */
+  border-radius: 8px;
+  display: flex;
+}
+@media(min-width:768px) {
+  .overlay form{
+    max-width: 800px; 
+  }
+}   
+
+.overlay input{
+  color: var(--original-black);
+  padding: 16px;
+  flex: 1;
+}
+.overlay input::placeholder {
+  font-size: 14px;
+  color:var(--original-gray);
+}
+/* 検索ボタン */
+.overlay button{
+  padding: 16px;
+  text-align: center;
+  border-left: dashed 1px var(--original-gray);
+  cursor: pointer;
+  transition: background .3s;
+}
+.overlay button:hover{
+    background: #eee;
 }
 
 /* ---ハンバーガーメニューsns文字色--- */
@@ -561,11 +619,9 @@ header form{
   header form{
     display: block; /* PCでは検索フォーム表示 */
   }
-  header input,
-  header button{
-    all:unset;
-  }
+
   header input{
+    color: var(--original-black);
     border-bottom: 1px solid var(--original-black);
     padding: 4px;
     width: 200px;
@@ -585,17 +641,11 @@ header form{
 
 
 
-
-
-
-
 /* ----------------グローバルメニュー---------------- */
 
 .grobal-menu{
   display: none;
 }
-
-/* 800px > */
 @media(min-width:768px) {
   .grobal-menu{
       display: block;
@@ -626,7 +676,6 @@ header form{
   padding: 0 12px;
   transition: color .3s;
 }
-
 
 .parent-menu > a:hover{
   color: var(--accentcolor);
