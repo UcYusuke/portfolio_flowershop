@@ -105,7 +105,7 @@
             {
               breakpoint: 768,
               settings: {
-                arrows:false,
+                arrows:false, //SPでは矢印非表示
               }
             }
           ]
@@ -126,6 +126,7 @@
               breakpoint: 768,
               settings: {
                 slidesToShow: 2, // 画面幅750px以下でスライド3枚表示
+                arrows:false, //SPでは矢印非表示
               }
             }
           ]
