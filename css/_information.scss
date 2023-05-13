@@ -1,0 +1,115 @@
+/* ----------------information----------------*/
+
+.information{
+    padding: 96px 0;
+
+    dl{
+        width: 100%;
+        box-sizing: border-box;
+        background:$original-light-gray;
+        border-radius: 16px;
+        padding: 32px;
+        margin: 16px auto 32px;
+
+        /* 共通スタイル */
+        & > div{
+            color: $original-black;
+            padding-bottom: 16px;
+            margin-bottom: 16px;
+            position: relative;
+            border-bottom: 1px dashed $original-gray;
+        }
+    }
+
+    dt{
+        align-items: center;
+        padding: 8px;
+        cursor: pointer;
+        user-select: none; /*ダブルクリックしてもテキスト選択されない*/
+        @media(min-width:769px) {
+            display: flex; /* PCでは日づけも横並び*/
+        }   
+        div{
+            display: flex; /* 親メッセージとボタンを横並び */
+            flex: 1; /* 右までいっぱいに広げる */
+            /* 親メニュー */
+            p{
+                font-size: 14px;
+                @media(min-width:769px) {
+                    font-size: 16px;
+                }  
+            }
+        }
+
+        /* 日付 */
+        & > p{
+            font-size: 14px;
+            margin-bottom: 4px;
+            color: $accentcolor; /* 日付の文字色 */
+            @media(min-width:769px) {
+                font-size: 16px;
+                margin-right: 16px;
+                margin-bottom: 0;
+            }   
+        }
+
+        //矢印アイコン
+        i{
+            font-size: 20px;
+            margin-left: auto; /* 矢印アイコンを右側へ */
+        }
+    }
+
+    /* 詳細文 */
+    dd{
+        font-size: 14px;
+        margin-left: 16px;
+    
+        /* 閉じている状態 */
+        /* 閉じているときはline-heightとpaddingも0にしておく */
+        opacity: 0;
+        visibility: hidden;
+        line-height: 0;
+        padding: 0; 
+    
+        /* 閉じるアニメーション */
+        transition:
+            line-height .3s ease-out,
+            padding     .3s ease-out,
+            opacity     .3s linear,
+            visibility  .3s linear;
+    
+    }
+
+    //showクラスをつけたときに詳細文表示
+    dl > div.show dd{
+        /* 開いている状態 */
+        line-height: 1.5;
+        opacity: 1;
+        visibility: visible;
+        padding: 8px 0;
+
+        /* 開くアニメーション */
+        transition:
+            line-height .3s ease-out,
+            padding     .3s ease-out,
+            opacity     .3s linear,
+            visibility  .3s linear;
+    }
+
+    /* ボタンの幅 */
+    .btn{
+        width: 40%;
+        margin: 32px auto 0;
+    }
+}
+
+.information .information-close{
+  display: none; /* 閉じるボタンはデフォルトで非表示 */
+}
+.information div.show .information-close{
+  display: block; /* divにshowクラスをつけたら閉じるボタン表示 */
+}
+.information div.show .information-open{
+  display: none; /* divにshowクラスをつけたら開くボタン表示 */
+}

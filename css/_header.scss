@@ -1,0 +1,99 @@
+/* ----------------ヘッダー---------------- */
+
+header{
+    box-sizing: border-box;
+    padding: 0 32px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+
+    //画面スクロールしたときheaderにつけるクラス
+    &.scrolled{ 
+      background: rgba(255,255,255,.97);
+      box-shadow: 0 0 4px rgba(0,0,0,.3);
+    }
+
+    .head-container{
+        display: flex; //ロゴとナビエリアを横並び
+        justify-content: space-between;
+      }
+
+    ul{
+      display: flex; //formとハンバーガーメニューボタンを横並び
+      align-items: center;
+      gap: 32px;
+    }
+
+
+    /* 検索フォーム */
+    form{
+      display: none; /* スマホでは検索フォーム非表示 */
+      @media(min-width:769px) {
+          display: block; /* PCでは検索フォーム表示 */
+        }
+    }
+
+    input{
+      color: $original-black;
+      border-bottom: 1px solid $original-black; //検索フォームの下線
+      padding: 4px;
+      width: 200px; //検索フォームの幅
+      &::placeholder {
+        font-size: 14px;
+        color:$original-gray;
+      }
+    }
+
+    button{
+      cursor: pointer;
+      transition: opacity .3s;
+      &:hover{
+          opacity: .7;
+      }
+    }
+}
+  
+  
+  
+header nav{
+    display: flex;
+    li div{
+        display: flex;
+        flex-direction: column; //メニューボタンと文字を縦並び
+        align-items: center;
+        transition: color .3s;
+        cursor: pointer;
+        &:hover{
+            color: darkgray;
+        }
+
+        i{
+          font-size: 32px; /* ハンバーガーメニューアイコンの大きさ */
+          @media(min-width:769px) {
+                font-size: 24px;
+          }   
+        }
+
+        p{
+          display: none; /* スマホではボタン下の文字非表示 */
+          @media(min-width:769px) {
+                font-size: 12px;
+                display: block; /* PCではボタン下の文字表示 */
+          }   
+        }
+    }
+}
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  

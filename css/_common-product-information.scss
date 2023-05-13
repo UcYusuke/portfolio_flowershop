@@ -1,0 +1,26 @@
+/* 商品情報 */
+.product-information p{
+    font-size: 14px;
+    color:$original-black;
+    text-align: center;
+    padding-top: 4px;
+  }
+
+/* 商品名 */
+  .products-name{
+    font-weight: bold;
+  }
+
+  /* 値段 */
+  .value{
+    &::before{
+        font-size: 14px;
+        margin-right: 2px;
+        content: '¥';
+    }
+    &::after{
+        font-size: 12px;
+        margin-left: 4px;
+        content: '税込';
+    }
+  }

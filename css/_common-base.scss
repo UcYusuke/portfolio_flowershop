@@ -1,0 +1,72 @@
+/* ----------------common---------------- */
+
+// 変数
+    $Mincho-font:"游明朝", "YuMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "MS Ｐ明朝", "MS PMincho", serif;
+    $Gothic-font:"游ゴシック体", "YuGothic", "游ゴシック", "Yu Gothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+    $original-light-gray:#f4f5f4;
+    $original-gray:#ccc;
+    $original-black:#333;
+    $accentcolor:darkgreen;
+
+
+body{
+    margin: 0;
+    font-family: $Gothic-font;
+}
+
+
+
+h1,
+h2,
+h3{
+    margin: 0;
+    font-weight: normal;
+}
+
+/* セクションタイトル */
+
+.tytle h2{
+    font-size: 24px;
+    letter-spacing: 4px;
+    font-family: $Mincho-font;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+.tytle p{
+  font-size: 16px;
+  letter-spacing: 4px;
+  margin-top: 4px;
+  font-family: $Mincho-font;
+  text-align: center;
+}
+
+.tytle h2::first-letter{
+    font-size: 28px;
+}
+
+p{
+    margin: 0;
+    /* font-family: var(--Mincho-font); */
+}
+
+img{
+    vertical-align: bottom;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+input,
+button{
+  all:unset;
+}

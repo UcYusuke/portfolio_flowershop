@@ -1,0 +1,31 @@
+/* sns */
+
+.sns{
+    padding: 48px 0 32px;
+
+    //タイトル
+    h3{
+      font-size: 16px;
+      text-align: center;
+      color: $original-black;
+      letter-spacing: 1px;
+    }
+    
+    div{
+      display: flex; //アイコンを横並び
+      justify-content: center;
+      gap: 32px; //アイコンのギャップ
+      font-size: 20px;  //アイコンのサイズ
+      padding: 8px 0;
+    }
+
+    a{
+      transition: opacity .3s;
+      &:hover{
+        opacity : .5;
+      }
+    }
+  }
+  
+  
+  

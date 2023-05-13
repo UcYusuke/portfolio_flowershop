@@ -1,0 +1,31 @@
+/* ボタン */
+.btn{
+    display: flex;
+    height:40px;
+    background:$accentcolor; //ボタンの色
+    color: white;
+    border-radius: 20px;
+    line-height: 40px;  
+    box-shadow: 0 2px 4px rgba(0,0,0,.2);
+    transition: opacity .3s;
+    &:hover{
+      opacity: .7;
+    }
+
+    p{
+        font-size: 14px;
+        flex: 1;
+        margin-left: 16px;
+        text-align: center;
+        @media(min-width:769px) {
+            font-size: 16px;
+        }
+      }
+      
+      //矢印部分
+      i{
+        margin: 0 16px 0 auto;
+      }
+}
+  
+  

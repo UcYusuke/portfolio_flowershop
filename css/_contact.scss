@@ -1,0 +1,102 @@
+/* ----------------contact---------------- */
+
+.contact{
+    margin-top: 96px;
+
+    .container{
+      display: flex;
+      justify-content: center;
+      color: $original-black;
+      @media(min-width:769px) {
+          height: 240px;
+      }   
+    }
+
+    .btn{
+        width: 50%; //ボタンの幅
+        margin-top: 16px;
+        @media(min-width:769px) {
+            width: 80%;//ボタンの幅
+        }   
+    }
+    
+    ul{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 32px;
+        @media(min-width:769px) {
+            flex-wrap: nowrap;
+            margin-top: 32px;
+        }   
+
+        li{
+            width: 80%;
+            text-align: center;
+            border-bottom: 1px solid #ccc;
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        
+            @media(min-width:769px) {
+                width: calc((100%) / 3);
+                border-left: 1px solid #ccc;
+                border-bottom: none;
+                padding: 16px;
+            }   
+        
+            &:last-child{
+                @media(min-width:769px) {
+                border-right: 1px solid $original-gray;
+                }
+            }   
+
+            /* アイコン部分 */
+            a:first-child{
+                display: block;
+                width: 60px;
+                height: 60px;
+                line-height: 60px;
+                border-radius: 50%;
+                font-size: 32px;
+                color: $accentcolor;
+                background: #f2f7f1;
+                margin-bottom: 16px;
+            }
+        }
+    }
+
+    /* 電話番号部分 */
+    .phone-number{
+        color: $accentcolor;
+        font-size: 24px;
+        letter-spacing: 1px;
+        font-weight: bold;
+        padding: 8px 0;
+    }
+    /* 営業時間部分 */
+    .business-hour{
+        font-size: 14px;
+    }
+
+    .tytle span{
+        display: none;
+        @media(min-width:769px) {
+            display: inline;
+        }   
+    }
+}
+  
+
+
+
+  
+  
+  
+
+  
+
+  
+ 

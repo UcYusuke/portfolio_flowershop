@@ -1,0 +1,120 @@
+/* ----------------グローバルメニュー---------------- */
+
+.grobal-menu{
+    display: none;
+    @media(min-width:769px) {
+          display: block;
+          padding-top: 96px;
+    }   
+
+    /* 親メニュー */
+    nav > ul{
+        display: flex; //親メニューを横並び
+        justify-content: center;
+        gap: 20px;
+        width: 100%; /* メニューリストの幅 */
+        height: 40px; /* メニューリストの高さ */
+        line-height: 40px; /* 高さ方向中央揃え */
+        margin: 0 auto;
+        position: relative; /* 子メニューの基準 */
+    }
+  }
+  
+ // 親メニュースタイリング
+  .parent-menu > a{
+    font-size: 16px;
+    font-weight: bold;
+    color: $original-black;
+    letter-spacing: 1px;
+    display: block; /* マウスホバーしやすいようa要素に幅と高さをつける */
+    height: 40px;
+    padding: 0 12px;
+    transition: color .3s;
+    &:hover{
+      color: $accentcolor;
+    }
+    /* 下矢印部分 */
+     i{
+      padding-left: 4px; 
+    }
+  }
+  
+  
+//  子メニュー画面のスタイリング
+  .child-menu{
+    display: none; /* デフォルトで非表示 */
+    &.active{
+      display: block; /* activeクラスがついたら表示 */
+    }
+
+    /* マウスを乗せたときに表示するメニュー画面 */
+    ul{
+      display: flex; //各項目を横並び
+      justify-content: center;
+      gap: 32px;
+      width: 100%; /* メニューウインドウの幅 */
+      background: $original-light-gray; /* メニュー画面の色 */
+      padding: 16px 0 64px;
+      position: absolute;
+      top: 40px; /* メニューウインドウの高さ位置。メニュー項目の高さ分 */
+      left: 0;
+      z-index: 1;
+      /* display blockに切り替わったときふわっと表示 */
+      animation: appear 1s ease; 
+    }
+    
+    a{
+        display: flex;
+        flex-direction: column; /* 画像と文字を縦ならび*/
+        align-items: center;
+    }
+
+    img{
+      width: 150px;
+      vertical-align: bottom;
+      object-fit: cover;
+      transition: opacity .3s, transform .3s;
+      &:hover{
+        opacity: .7;
+        transform: scale(1.05);
+      }
+    }
+
+    p{
+      font-size: 16px;
+      color: $original-black;
+    }
+
+    /* 子ウインドウがテキストのみの部分 */
+    .text-category a{
+        color: $original-black;
+        background: $original-gray;
+        border-radius: 8px;
+        padding: 8px 16px;
+        transition: opacity .3s, background .6s, color .6s;
+        &:hover{
+        opacity: .9;
+        background: $accentcolor;
+        color: white;
+        }
+    }
+  }
+  
+  
+    
+    
+  
+  
+  
+
+  
+  
+  /* display blockに切り替わったときにつけるアニメーション */
+  @keyframes appear {
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }

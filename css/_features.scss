@@ -1,0 +1,25 @@
+/* ----------------features---------------- */
+
+.features{
+    padding-top: 96px;
+
+    img{
+      border: solid 1px $original-gray;
+    }
+
+    li div{
+      display: flex;
+      flex-direction: column; /* 画像と文字を縦並び */
+      align-items: center;
+    }
+    
+    li p{
+      font-size: 12px;
+      color: $original-black;
+      @media(min-width:769px) {
+          font-size: 14px;
+      }   
+    }
+}
+  
+  

@@ -1,0 +1,45 @@
+/* ----------------ランキング---------------- */
+
+.ranking{
+    padding-top: 96px;
+
+    /* 順位の数字部分の親要素 */
+    li div:first-child{
+      position: relative; 
+    }
+    
+    /* 順位の数字部分 */
+    h3{
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      color: white;
+      text-align: center;
+      border-radius: 50%;
+      /* 左上に配置 */
+      position: absolute;
+      top: 0;
+      left:0;
+      transform: translate(-30%,-30%);
+    }
+
+    /* 1位 */
+    li:nth-child(1) h3{
+        background: darkgoldenrod;
+    }
+    /* 2位 */
+    li:nth-child(2) h3{
+        background: gray;
+    }
+    /* 3位 */
+    li:nth-child(3) h3{
+        background: darkred;
+    }
+    /* 4位以降 */
+    li:nth-child(n + 4) h3{
+        background: darkgreen;
+    }
+}
+  
+  
+  

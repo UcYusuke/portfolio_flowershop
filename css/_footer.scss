@@ -1,0 +1,163 @@
+/* ----------------footer---------------- */
+
+footer{
+    background: $original-light-gray;
+    padding-top: 32px;
+    position: relative;
+  }
+
+  /* ページトップへの部分 */
+  footer .up{
+    display: flex;
+    transform: translateY(-100%); /* 自身の大きさ分上へ移動 */ 
+    position: absolute;
+    top: 0;
+    right: 16px;
+
+    a{
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      background: $original-light-gray;
+      padding: 8px 16px;
+      border-radius: 2px;
+      font-size: 12px;
+      color:$original-black;
+      transition: transform .5s;
+      &:hover{
+        transform: translateY(8px);
+      }  
+    }
+}
+
+  
+/* footer adress */
+footer .adress{
+    padding-bottom: 8px;
+    color: $original-black;
+    text-align: center;
+
+    h3{
+        font-family: $Mincho-font;
+        font-size: 18px;
+        font-weight: bold;
+        padding-bottom: 16px;
+    }
+
+    p{
+        font-size: 14px;
+        padding-bottom: 4px;
+    }
+}
+
+
+/* footer guides */
+footer .guides{
+    h3{
+      text-align: center;
+      font-size: 16px;
+      padding: 16px 0;
+      color: #333;
+      letter-spacing: 1px;
+    }
+
+    ul{
+        margin: 0 auto;
+        gap: 16px;
+        justify-content: center;
+    }
+    
+    li{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        p{
+            font-size: 14px;
+            padding-top: 8px;
+        }
+    } 
+      
+    i{
+        font-size: 24px;
+    }
+
+    a{
+        display: block;
+        font-size: 14px;
+        color: $original-black;
+        letter-spacing: 1px;
+        padding: 16px 0;
+        background: white;
+        border-radius: 16px;
+        transition: opacity .3s, background .3s;
+        &:hover{
+        opacity: .9;
+        background: #eee;
+        }
+    }
+    
+    img{
+        display: block;
+        margin-left:auto;
+        width: 300px;
+    }
+}
+
+  
+/* copyright */
+  
+  footer .copyright{
+    font-size: 14px;
+    background:$accentcolor;
+    color: white;
+    padding: 16px 0;
+
+    div{
+        display: flex;
+        align-items: center;
+        flex-direction: column; /* copyrightとその他項目を縦並び*/
+        @media(min-width:769px) {
+            flex-direction: row; /* copyrightとその他項目を横並び*/
+        }   
+    }
+   
+    ul{
+      display: flex;
+      justify-content: center;
+    }
+  
+    li{
+      font-size: 12px;
+      padding: 0 16px;
+      @media(min-width:769px) {
+          font-size: 14px;
+      }   
+      &:first-child{
+        border-right: 1px solid white;
+      }
+    }
+
+    a{
+        transition: opacity .3s;
+        &:hover{
+          opacity: .7;
+        }
+    }
+    
+    small{
+        text-align: center;
+        padding: 8px;
+        @media(min-width:769px) {
+            margin-left: auto;
+            padding: 0 8px;
+        }   
+    }
+  }
+
+  
+
+  
+
+  
+
+  
