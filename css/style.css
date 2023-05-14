@@ -79,6 +79,7 @@ button {
   border-radius: 20px;
   line-height: 40px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  position: relative;
   transition: opacity 0.3s;
 }
 .btn:hover {
@@ -87,7 +88,6 @@ button {
 .btn p {
   font-size: 14px;
   flex: 1;
-  margin-left: 16px;
   text-align: center;
 }
 @media (min-width: 769px) {
@@ -96,7 +96,10 @@ button {
   }
 }
 .btn i {
-  margin: 0 16px 0 auto;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 /* 3つずつ配列 */
@@ -784,6 +787,9 @@ header nav li div p {
   margin-top: 96px;
   background: #f4f5f4;
 }
+.new-items img {
+  margin-bottom: 8px;
+}
 
 /* ----------------features---------------- */
 .features {
@@ -890,7 +896,7 @@ header nav li div p {
   }
 }
 .contact .btn {
-  width: 50%;
+  width: 80%;
   margin-top: 16px;
 }
 @media (min-width: 769px) {
@@ -962,6 +968,9 @@ header nav li div p {
   .contact .tytle span {
     display: inline;
   }
+}
+.contact #line-icon {
+  color: #06c755;
 }
 
 /* ----------------information----------------*/
@@ -1051,8 +1060,13 @@ header nav li div p {
   transition: line-height 0.3s ease-out, padding 0.3s ease-out, opacity 0.3s linear, visibility 0.3s linear;
 }
 .information .btn {
-  width: 40%;
+  width: 60%;
   margin: 32px auto 0;
+}
+@media (min-width: 769px) {
+  .information .btn {
+    width: 40%;
+  }
 }
 
 .information .information-close {

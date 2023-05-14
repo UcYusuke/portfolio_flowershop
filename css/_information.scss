@@ -99,8 +99,11 @@
 
     /* ボタンの幅 */
     .btn{
-        width: 40%;
+        width: 60%;
         margin: 32px auto 0;
+        @media(min-width:769px) {
+            width: 40%;
+        }   
     }
 }
 

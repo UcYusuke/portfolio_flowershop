@@ -7,6 +7,7 @@
     border-radius: 20px;
     line-height: 40px;  
     box-shadow: 0 2px 4px rgba(0,0,0,.2);
+    position: relative; //矢印の基準
     transition: opacity .3s;
     &:hover{
       opacity: .7;
@@ -15,7 +16,6 @@
     p{
         font-size: 14px;
         flex: 1;
-        margin-left: 16px;
         text-align: center;
         @media(min-width:769px) {
             font-size: 16px;
@@ -24,7 +24,10 @@
       
       //矢印部分
       i{
-        margin: 0 16px 0 auto;
+        position: absolute;
+        right: 16px; //右から16pxに配置
+        top: 50%; //縦方向真ん中に配置
+        transform: translateY(-50%); //縦方向真ん中に配置
       }
 }
   

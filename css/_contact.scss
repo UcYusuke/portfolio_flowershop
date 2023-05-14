@@ -13,7 +13,7 @@
     }
 
     .btn{
-        width: 50%; //ボタンの幅
+        width: 80%; //ボタンの幅
         margin-top: 16px;
         @media(min-width:769px) {
             width: 80%;//ボタンの幅
@@ -86,6 +86,10 @@
         @media(min-width:769px) {
             display: inline;
         }   
+    }
+
+    #line-icon{
+        color: #06c755;
     }
 }
   
