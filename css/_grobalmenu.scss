@@ -22,7 +22,7 @@
   
  // 親メニュースタイリング
   .parent-menu > a{
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: bold;
     color: $original-black;
     letter-spacing: 1px;
@@ -81,12 +81,13 @@
     }
 
     p{
-      font-size: 16px;
+      font-size: 1.6rem;
       color: $original-black;
     }
 
     /* 子ウインドウがテキストのみの部分 */
     .text-category a{
+        font-size: 1.6rem;
         color: $original-black;
         background: $original-gray;
         border-radius: 8px;

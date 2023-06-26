@@ -14,10 +14,10 @@
     }
     
     li p{
-      font-size: 12px;
+      font-size: 1.2rem;
       color: $original-black;
       @media(min-width:769px) {
-          font-size: 14px;
+          font-size: 1.4rem;
       }   
     }
 }

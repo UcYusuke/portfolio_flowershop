@@ -43,10 +43,10 @@
             color: darkgray;
         }
         span{
-            font-size: 32px; //閉じるボタンの大きさ
+            font-size: 3.2rem; //閉じるボタンの大きさ
         }
         p{
-            font-size: 14px; //閉じるボタンの下の文字
+            font-size: 1.4rem; //閉じるボタンの下の文字
         }
     }
 
@@ -68,7 +68,7 @@
         padding: 16px;
         flex: 1;
         &::placeholder {
-        font-size: 14px;
+        font-size: 1.4rem;
         color:$original-gray;
         }
     }
@@ -136,6 +136,7 @@
   .accordion-parent-menu{
       box-sizing: border-box;
       height: 56px;
+      font-size: 1.6rem; /* 親メニューの文字サイズ */
       color: $original-black; /* 親メニューの文字色 */
       background: $original-light-gray; /* 親メニューの背景色 */
       border: dashed 1px $original-gray; /* 親メニューのボーダー */
@@ -214,7 +215,7 @@
             font-family: "Font Awesome 5 Free";
             content: '\f054';
             font-weight: 900;
-            font-size: 10px;
+            font-size: 1rem;
             position: absolute;
             top: 50%; /* 矢印の位置 */
             left: 16px; /* 矢印の位置 */
@@ -229,6 +230,7 @@
     a{
         box-sizing: border-box;
         display: block;
+        font-size: 1.6rem; /* 子メニューの文字サイズ */
         color: $original-black; /* 子メニューの文字色 */
         background: $original-light-gray; /* 子メニューの背景色 */
         border-radius: 8px;

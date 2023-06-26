@@ -21,7 +21,7 @@ footer{
       background: $original-light-gray;
       padding: 8px 16px;
       border-radius: 2px;
-      font-size: 12px;
+      font-size: 1.2rem;
       color:$original-black;
       transition: transform .5s;
       &:hover{
@@ -39,13 +39,13 @@ footer .adress{
 
     h3{
         font-family: $Mincho-font;
-        font-size: 18px;
+        font-size: 1.8rem;
         font-weight: bold;
         padding-bottom: 16px;
     }
 
     p{
-        font-size: 14px;
+        font-size: 1.4rem;
         padding-bottom: 4px;
     }
 }
@@ -55,7 +55,7 @@ footer .adress{
 footer .guides{
     h3{
       text-align: center;
-      font-size: 16px;
+      font-size: 1.6rem;
       padding: 16px 0;
       color: #333;
       letter-spacing: 1px;
@@ -72,18 +72,18 @@ footer .guides{
         display: flex;
         flex-direction: column;
         p{
-            font-size: 14px;
+            font-size: 1.4rem;
             padding-top: 8px;
         }
     } 
       
     i{
-        font-size: 24px;
+        font-size: 2.4rem;
     }
 
     a{
         display: block;
-        font-size: 14px;
+        font-size: 1.4rem;
         color: $original-black;
         letter-spacing: 1px;
         padding: 16px 0;
@@ -107,7 +107,7 @@ footer .guides{
 /* copyright */
   
   footer .copyright{
-    font-size: 14px;
+    font-size: 1.4rem;
     background:$accentcolor;
     color: white;
     padding: 16px 0;
@@ -127,10 +127,10 @@ footer .guides{
     }
   
     li{
-      font-size: 12px;
+      font-size: 1.2rem;
       padding: 0 16px;
       @media(min-width:769px) {
-          font-size: 14px;
+          font-size: 1.4rem;
       }   
       &:first-child{
         border-right: 1px solid white;

@@ -1,6 +1,6 @@
 /* 商品情報 */
 .product-information p{
-    font-size: 14px;
+    font-size: 1.4rem;
     color:$original-black;
     text-align: center;
     padding-top: 4px;
@@ -14,12 +14,12 @@
   /* 値段 */
   .value{
     &::before{
-        font-size: 14px;
+        font-size: 1.4rem;
         margin-right: 2px;
         content: '¥';
     }
     &::after{
-        font-size: 12px;
+        font-size: 1.2rem;
         margin-left: 4px;
         content: '税込';
     }

@@ -34,20 +34,20 @@
             flex: 1; /* 右までいっぱいに広げる */
             /* 親メニュー */
             p{
-                font-size: 14px;
+                font-size: 1.4rem;
                 @media(min-width:769px) {
-                    font-size: 16px;
+                    font-size: 1.6rem;
                 }  
             }
         }
 
         /* 日付 */
         & > p{
-            font-size: 14px;
+            font-size: 1.4rem;
             margin-bottom: 4px;
             color: $accentcolor; /* 日付の文字色 */
             @media(min-width:769px) {
-                font-size: 16px;
+                font-size: 1.6rem;
                 margin-right: 16px;
                 margin-bottom: 0;
             }   
@@ -55,14 +55,14 @@
 
         //矢印アイコン
         i{
-            font-size: 20px;
+            font-size: 2rem;
             margin-left: auto; /* 矢印アイコンを右側へ */
         }
     }
 
     /* 詳細文 */
     dd{
-        font-size: 14px;
+        font-size: 1.4rem;
         margin-left: 16px;
     
         /* 閉じている状態 */

@@ -5,7 +5,7 @@
 
     //タイトル
     h3{
-      font-size: 16px;
+      font-size: 1.6rem;
       text-align: center;
       color: $original-black;
       letter-spacing: 1px;
@@ -15,7 +15,7 @@
       display: flex; //アイコンを横並び
       justify-content: center;
       gap: 32px; //アイコンのギャップ
-      font-size: 20px;  //アイコンのサイズ
+      font-size: 2rem;  //アイコンのサイズ
       padding: 8px 0;
     }
 

@@ -1,5 +1,9 @@
 @charset "UTF-8";
 /* 文字コードの指定 */ /* ----------------common---------------- */
+html {
+  font-size: 62.5%;
+}
+
 body {
   margin: 0;
   font-family: "游ゴシック体", "YuGothic", "游ゴシック", "Yu Gothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
@@ -14,7 +18,7 @@ h3 {
 
 /* セクションタイトル */
 .tytle h2 {
-  font-size: 24px;
+  font-size: 2.4rem;
   letter-spacing: 4px;
   font-family: "游明朝", "YuMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "MS Ｐ明朝", "MS PMincho", serif;
   text-align: center;
@@ -22,7 +26,7 @@ h3 {
 }
 
 .tytle p {
-  font-size: 16px;
+  font-size: 1.6rem;
   letter-spacing: 4px;
   margin-top: 4px;
   font-family: "游明朝", "YuMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "MS Ｐ明朝", "MS PMincho", serif;
@@ -30,7 +34,7 @@ h3 {
 }
 
 .tytle h2::first-letter {
-  font-size: 28px;
+  font-size: 2.8rem;
 }
 
 p {
@@ -86,13 +90,13 @@ button {
   opacity: 0.7;
 }
 .btn p {
-  font-size: 14px;
+  font-size: 1.4rem;
   flex: 1;
   text-align: center;
 }
 @media (min-width: 769px) {
   .btn p {
-    font-size: 16px;
+    font-size: 1.6rem;
   }
 }
 .btn i {
@@ -131,7 +135,7 @@ button {
 
 /* 商品情報 */
 .product-information p {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #333;
   text-align: center;
   padding-top: 4px;
@@ -144,12 +148,12 @@ button {
 
 /* 値段 */
 .value::before {
-  font-size: 14px;
+  font-size: 1.4rem;
   margin-right: 2px;
   content: "¥";
 }
 .value::after {
-  font-size: 12px;
+  font-size: 1.2rem;
   margin-left: 4px;
   content: "税込";
 }
@@ -191,7 +195,7 @@ button {
   bottom: -20%; /*ドットの縦方向位置*/
 }
 .slick-dots li button:before {
-  font-size: 16px;
+  font-size: 1.6rem;
 }
 
 /* sns */
@@ -199,7 +203,7 @@ button {
   padding: 48px 0 32px;
 }
 .sns h3 {
-  font-size: 16px;
+  font-size: 1.6rem;
   text-align: center;
   color: #333;
   letter-spacing: 1px;
@@ -208,7 +212,7 @@ button {
   display: flex;
   justify-content: center;
   gap: 32px;
-  font-size: 20px;
+  font-size: 2rem;
   padding: 8px 0;
 }
 .sns a {
@@ -265,10 +269,10 @@ button {
   color: darkgray;
 }
 .overlay #close span {
-  font-size: 32px;
+  font-size: 3.2rem;
 }
 .overlay #close p {
-  font-size: 14px;
+  font-size: 1.4rem;
 }
 .overlay form {
   width: calc(100% - 32px); /* 全体の幅 */
@@ -289,11 +293,11 @@ button {
   flex: 1;
 }
 .overlay input::-moz-placeholder {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #ccc;
 }
 .overlay input::placeholder {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #ccc;
 }
 .overlay button {
@@ -353,6 +357,7 @@ button {
 .accordion-parent-menu {
   box-sizing: border-box;
   height: 56px;
+  font-size: 1.6rem; /* 親メニューの文字サイズ */
   color: #333; /* 親メニューの文字色 */
   background: #f4f5f4; /* 親メニューの背景色 */
   border: dashed 1px #ccc; /* 親メニューのボーダー */
@@ -420,7 +425,7 @@ li.show .accordion-child-menu a::before {
   font-family: "Font Awesome 5 Free";
   content: "\f054";
   font-weight: 900;
-  font-size: 10px;
+  font-size: 1rem;
   position: absolute;
   top: 50%; /* 矢印の位置 */
   left: 16px; /* 矢印の位置 */
@@ -431,6 +436,7 @@ li.show .accordion-child-menu a::before {
 .accordion-child-menu a {
   box-sizing: border-box;
   display: block;
+  font-size: 1.6rem; /* 子メニューの文字サイズ */
   color: #333; /* 子メニューの文字色 */
   background: #f4f5f4; /* 子メニューの背景色 */
   border-radius: 8px;
@@ -492,11 +498,11 @@ header input {
   width: 200px;
 }
 header input::-moz-placeholder {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #ccc;
 }
 header input::placeholder {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #ccc;
 }
 header button {
@@ -521,11 +527,11 @@ header nav li div:hover {
   color: darkgray;
 }
 header nav li div i {
-  font-size: 32px; /* ハンバーガーメニューアイコンの大きさ */
+  font-size: 3.2rem; /* ハンバーガーメニューアイコンの大きさ */
 }
 @media (min-width: 769px) {
   header nav li div i {
-    font-size: 24px;
+    font-size: 2.4rem;
   }
 }
 header nav li div p {
@@ -533,7 +539,7 @@ header nav li div p {
 }
 @media (min-width: 769px) {
   header nav li div p {
-    font-size: 12px;
+    font-size: 1.2rem;
     display: block; /* PCではボタン下の文字表示 */
   }
 }
@@ -561,7 +567,7 @@ header nav li div p {
 }
 
 .parent-menu > a {
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: bold;
   color: #333;
   letter-spacing: 1px;
@@ -617,10 +623,11 @@ header nav li div p {
   transform: scale(1.05);
 }
 .child-menu p {
-  font-size: 16px;
+  font-size: 1.6rem;
   color: #333;
 }
 .child-menu .text-category a {
+  font-size: 1.6rem;
   color: #333;
   background: #ccc;
   border-radius: 8px;
@@ -666,13 +673,13 @@ header nav li div p {
   /* 説明文 */
 }
 .category-box ul li p:nth-of-type(1) {
-  font-size: 14px;
+  font-size: 1.4rem;
   text-align: center;
   padding-top: 4px;
 }
 @media (min-width: 769px) {
   .category-box ul li p:nth-of-type(1) {
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: bold;
     text-align: center;
     padding: 16px 0 8px;
@@ -684,7 +691,7 @@ header nav li div p {
 @media (min-width: 769px) {
   .category-box ul li p:nth-of-type(n+2) {
     display: block;
-    font-size: 14px; /* PCでは説明文非表示 */
+    font-size: 1.4rem; /* PCでは説明文非表示 */
     color: #333;
     line-height: 2;
     padding: 0 4px;
@@ -693,6 +700,7 @@ header nav li div p {
 
 /* タブメニュー用 */
 .tab-menu {
+  font-size: 1.6rem;
   display: flex;
   margin: 32px;
   justify-content: center;
@@ -804,12 +812,12 @@ header nav li div p {
   align-items: center;
 }
 .features li p {
-  font-size: 12px;
+  font-size: 1.2rem;
   color: #333;
 }
 @media (min-width: 769px) {
   .features li p {
-    font-size: 14px;
+    font-size: 1.4rem;
   }
 }
 
@@ -843,14 +851,14 @@ header nav li div p {
      object-fit: cover;
 }
 .aboutus .key-message {
-  font-size: 14px;
+  font-size: 1.4rem;
   margin: 16px 0;
   border-bottom: 1px solid #333;
   padding-bottom: 8px;
 }
 @media (min-width: 769px) {
   .aboutus .key-message {
-    font-size: 16px;
+    font-size: 1.6rem;
   }
 }
 .aboutus .message {
@@ -866,12 +874,12 @@ header nav li div p {
   }
 }
 .aboutus .message p:nth-of-type(n+2) {
-  font-size: 12px;
+  font-size: 1.2rem;
   padding-bottom: 16px;
 }
 @media (min-width: 769px) {
   .aboutus .message p:nth-of-type(n+2) {
-    font-size: 14px;
+    font-size: 1.4rem;
   }
 }
 
@@ -946,20 +954,23 @@ header nav li div p {
   height: 60px;
   line-height: 60px;
   border-radius: 50%;
-  font-size: 32px;
+  font-size: 3.2rem;
   color: darkgreen;
   background: #f2f7f1;
   margin-bottom: 16px;
 }
+.contact ul li p {
+  font-size: 1.6rem;
+}
 .contact .phone-number {
   color: darkgreen;
-  font-size: 24px;
+  font-size: 2.4rem;
   letter-spacing: 1px;
   font-weight: bold;
   padding: 8px 0;
 }
 .contact .business-hour {
-  font-size: 14px;
+  font-size: 1.4rem;
 }
 .contact .tytle span {
   display: none;
@@ -1015,31 +1026,31 @@ header nav li div p {
   /* 親メニュー */
 }
 .information dt div p {
-  font-size: 14px;
+  font-size: 1.4rem;
 }
 @media (min-width: 769px) {
   .information dt div p {
-    font-size: 16px;
+    font-size: 1.6rem;
   }
 }
 .information dt > p {
-  font-size: 14px;
+  font-size: 1.4rem;
   margin-bottom: 4px;
   color: darkgreen; /* 日付の文字色 */
 }
 @media (min-width: 769px) {
   .information dt > p {
-    font-size: 16px;
+    font-size: 1.6rem;
     margin-right: 16px;
     margin-bottom: 0;
   }
 }
 .information dt i {
-  font-size: 20px;
+  font-size: 2rem;
   margin-left: auto; /* 矢印アイコンを右側へ */
 }
 .information dd {
-  font-size: 14px;
+  font-size: 1.4rem;
   margin-left: 16px;
   /* 閉じている状態 */
   /* 閉じているときはline-heightとpaddingも0にしておく */
@@ -1103,7 +1114,7 @@ footer .up a {
   background: #f4f5f4;
   padding: 8px 16px;
   border-radius: 2px;
-  font-size: 12px;
+  font-size: 1.2rem;
   color: #333;
   transition: transform 0.5s;
 }
@@ -1119,19 +1130,19 @@ footer .adress {
 }
 footer .adress h3 {
   font-family: "游明朝", "YuMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "MS Ｐ明朝", "MS PMincho", serif;
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: bold;
   padding-bottom: 16px;
 }
 footer .adress p {
-  font-size: 14px;
+  font-size: 1.4rem;
   padding-bottom: 4px;
 }
 
 /* footer guides */
 footer .guides h3 {
   text-align: center;
-  font-size: 16px;
+  font-size: 1.6rem;
   padding: 16px 0;
   color: #333;
   letter-spacing: 1px;
@@ -1147,15 +1158,15 @@ footer .guides li {
   flex-direction: column;
 }
 footer .guides li p {
-  font-size: 14px;
+  font-size: 1.4rem;
   padding-top: 8px;
 }
 footer .guides i {
-  font-size: 24px;
+  font-size: 2.4rem;
 }
 footer .guides a {
   display: block;
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #333;
   letter-spacing: 1px;
   padding: 16px 0;
@@ -1175,7 +1186,7 @@ footer .guides img {
 
 /* copyright */
 footer .copyright {
-  font-size: 14px;
+  font-size: 1.4rem;
   background: darkgreen;
   color: white;
   padding: 16px 0;
@@ -1195,12 +1206,12 @@ footer .copyright ul {
   justify-content: center;
 }
 footer .copyright li {
-  font-size: 12px;
+  font-size: 1.2rem;
   padding: 0 16px;
 }
 @media (min-width: 769px) {
   footer .copyright li {
-    font-size: 14px;
+    font-size: 1.4rem;
   }
 }
 footer .copyright li:first-child {

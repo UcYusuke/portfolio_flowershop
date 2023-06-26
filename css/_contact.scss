@@ -60,10 +60,15 @@
                 height: 60px;
                 line-height: 60px;
                 border-radius: 50%;
-                font-size: 32px;
+                font-size: 3.2rem;
                 color: $accentcolor;
                 background: #f2f7f1;
                 margin-bottom: 16px;
+            }
+
+            //アイコン下の文字
+            p{
+                font-size: 1.6rem;
             }
         }
     }
@@ -71,14 +76,14 @@
     /* 電話番号部分 */
     .phone-number{
         color: $accentcolor;
-        font-size: 24px;
+        font-size: 2.4rem;
         letter-spacing: 1px;
         font-weight: bold;
         padding: 8px 0;
     }
     /* 営業時間部分 */
     .business-hour{
-        font-size: 14px;
+        font-size: 1.4rem;
     }
 
     .tytle span{
