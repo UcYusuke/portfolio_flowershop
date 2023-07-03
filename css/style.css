@@ -764,6 +764,7 @@ header nav li div p {
   position: relative;
 }
 .ranking h3 {
+  font-size: 1.6rem;
   width: 40px;
   height: 40px;
   line-height: 40px;
